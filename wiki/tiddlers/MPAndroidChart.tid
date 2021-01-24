@@ -1,0 +1,19 @@
+created: 20190906075531575
+modified: 20190906105745810
+tags: android
+title: MPAndroidChart
+type: text/vnd.tiddlywiki
+
+* github：[[https://github.com/PhilJay/MPAndroidChart]]
+* API：https://javadoc.jitpack.io/com/github/philjay/mpandroidchart/v3.1.0-alpha/javadoc/
+* 教程：https://blog.csdn.net/u014136472/article/details/50273309
+
+```java
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}
+```

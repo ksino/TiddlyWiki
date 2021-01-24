@@ -1,6 +1,6 @@
 {
   "port": 5013,
-  "name": "PublicWiki",
+  "name": "wiki",
   "userName": "ksino",
   "privateWikiName": "PrivateWiki",
   "version": "1.0.0",
@@ -9,10 +9,11 @@
     "install:privateRepo": "node -e \"require('./scripts/installPrivateRepo')()\"",
     "uninstall:wikiServer": "node -e \"require('./scripts/installServer').uninstall()\"",
     "start:wikiServer": "node -e \"require('./scripts/startNodeJSWiki')()\"",
+    "watch": "node -e \"require('./scripts/startAndWatchNodeJSWiki')()\"",
     "build": "node -e \"require('./scripts/buildWiki')()\""
   },
   "dependencies": {
-    "tiddlywiki": "5.1.22"
+    "tiddlywiki": "5.1.23"
   },
   "devDependencies": {
     "html-minifier-terser": "5.1.1",

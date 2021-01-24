@@ -1,0 +1,20 @@
+created: 20190519001921573
+creator: ksino.H
+modified: 20210123021322660
+modifier: ksino.H
+tags: JavaScript
+title: DOM-API
+type: text/vnd.tiddlywiki
+
+* 查询
+*> `querySelector`
+*> `querySelectorAll`
+*>`getAttribute`
+* 增加修改
+*> `createElement`
+*>`appendChild`
+* 删除
+*>`remove`
+*>`removeChild`
+* 事件
+*> `addEventListener`

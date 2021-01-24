@@ -1,0 +1,24 @@
+created: 20191129084712495
+modified: 20191129085022973
+tags: opengl
+title: OpenGL实现瀑布图的一些思路
+type: text/vnd.tiddlywiki
+
+> [[https://blog.csdn.net/pc0de/article/details/69786243]]
+
+>若需要通过OPenGL实现瀑布图，则必需考虑数据的实时`变化`、`移动`、`缩放`、`旋转`等实际需求
+* 1、使用glDrawPixels绘制
+ 此方法是直接绘制位图的，可通过glPixelZoom 缩放、gluOrtho2D 定位具体位置。
+旋转目前没有找到好的方法，也许可以直接操作数据。
+此方法的优点是使用方便，可以直接定义位图的颜色索引，目前看来最明显的缺点是旋转需要自己操作数据（通过cpu实现）
+
+* 2、使用纹理贴图
+将数据通过glTex2D绑定在某纹理，通过纹理与2d平面顶点的映射直接实现缩放、移动旋转等效果
+此方法优点是图形的变换操作简便；
+缺点是：A.无法使用颜色索引。B.数据若发生变化，需要重新设置纹理数据
+
+到底使用哪一种当然是根据实际需求选择，就目前掌握的皮毛来说，我比较倾向使用纹理贴图实现。
+
+* 下面是实现的一个效果
+
+[img[https://img-blog.csdn.net/20170411060241292?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGMwZGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast]]

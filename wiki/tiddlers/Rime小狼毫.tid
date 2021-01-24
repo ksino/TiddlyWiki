@@ -1,0 +1,26 @@
+created: 20191031092507857
+modified: 20191031094222423
+tags: input-method
+title: Rime小狼毫
+type: text/vnd.tiddlywiki
+
+> [[必知必会|https://github.com/rime/home/wiki/RimeWithSchemata]]
+
+!! windows备份
+
+* 用户文件夹：`%APPDATA%\Rime`
+* 编辑 `C:\Users\kim\AppData\Roaming\Rime\installation.yaml`
+
+```yaml
+# 同步路径下的文件夹名字
+installation_id: 'fred-win7-desktop'
+
+# 同步的路径
+sync_dir: 'D:\Dropbox\RimeSync'
+```
+* 通过云盘同步
+* 在开始菜单找到`用户词典管理`
+** 分别合入词典快照和导入文件码表。
+* 配置文件只能手工替换
+
+

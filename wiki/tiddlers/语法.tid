@@ -1,0 +1,82 @@
+created: 20200523015841790
+modified: 20200523015913631
+tags: macro
+title: 语法
+type: text/vnd.tiddlywiki
+
+[[宏|Macros]]使用[[编译指示|Pragma]] `\define` 定义。如同任何编译指示，宏定义必须位于条目的开始位置。
+
+该定义的第一行指定宏的名称和所有参数。每个参数都有一个名称，以及用于调用宏而未指定参数值时，可选用的默认值。接下来的行包含宏内容（即由宏名称所代表的片段），直到出现一行 `\end`：
+
+```
+\define copy-code(src)
+<div class="doc-example">
+
+<$macrocall $name="copy-to-clipboard" src=<<__src__>>/>
+
+`$src$`
+\end
+```
+<<copy-code 'npm install tiddlywiki'>>
+
+
+此语法也有一个更正式的[[陈述|Macro Definition Syntax]]。
+
+!! 存取变数和参数
+
+在宏的内部，有一些方法用于存取在宏或宏参数列表之外定义的变量和参数。
+
+|语法|说明|h
+|`$...$`|在宏参数列表中定义的参数的文字替换 |
+|`<<__...__>>`|在宏参数列表中定义的参数，将参数当作变量存取 |
+|`$(...)$`|变量占位符到宏外定义的变量的文字替换 |
+|`<<...>>`|在宏外部定义的变量 (或其他宏) 的变量存取 |
+<br>
+
+!!! 占位符 `$(...)$`
+
+宏可以包含参数的占位符。这些由包含美元符号之间的参数名称组成，例如 `$this$`。
+
+该宏也可以包含[[变量|Variables]]的占位符。这些由包含变量名称（或宏名称）的美元符号和小括号组成，例如 `$(this)$`。
+
+每当宏被调用，参数或变量的实际值取代占位符：
+
+<$importvariables filter="$:/editions/tw5.com/macro-examples/say-hi-using-variables">
+<$codeblock code={{$:/editions/tw5.com/macro-examples/say-hi-using-variables}}/>
+<$macrocall $name=".example" n="1"
+eg="""<$set name="address" value="兔子坑">
+<<say-hi-using-variables>>
+</$set>"""/>
+</$importvariables>
+
+!!! 参数当作变数 `<<__...__>>`
+
+wikitext 宏的参数可以通过使用语法 `<<__...__>>` 当作变量来存取，亦即该参数名称由双底线括起来。。例如，上面的示例也可以表示为：
+
+```
+\define sayhi(name:"Bugs Bunny") Hi, I'm <$text text=<<__name__>>/>.
+```
+
+当作变量存取参数仅在 wikified 的宏中有效，例如，当宏用作属性值时。该技术的优点是，它可以避免将参数值替换为文本字符串，这反过来又有助于避免包含引号的参数的问题。
+
+例如，考虑这个宏。使用单一参数作为自变量，调用另一个宏：
+
+```
+\define film-quote(line) <$macrocall $name="anothermacro" actor="Bugs Bunny" line="""$line$"""/>
+```
+
+如果被调用的宏的参数有三个双引号 (例如，`<<film-quote 'I quote thrice """ - see!?'>>`)，上面的代码将会失败。使用参数变量提供了一种解决方法：
+
+```
+\define film-quote(line) <$macrocall $name="anothermacro" actor="Bugs Bunny" line=<<__line__>>/>
+```
+
+!! 范围
+
+宏可用于定义它的条目，以及该条目嵌入的任何条目。
+
+为了使宏可用于所有条目，在具有标签 $:/tags/Macro 的条目中定义它。
+
+也可以将宏写成一个 [[JavaScript 模块|https://tiddlywiki.com/dev/index.html#JavaScript%20Macros]]。~JavaScript 宏可用于所有条目，并提供最大的灵活性。
+
+一个条目可以使用 <<.wlink ImportVariablesWidget>> 小工具，手动从其他条目的[[选定条目|Title Selection]]导入宏定义。

@@ -1,0 +1,18 @@
+created: 20190612214456068
+modified: 20201125030416644
+tags: pyqt
+title: pyqt5安装
+type: text/vnd.tiddlywiki
+
+* `pip install pyqt5 pyqt5-tools`
+
+```python
+D:\Catalog\pyqt
+(pyqt) $ python helloworld.py
+Traceback (most recent call last):
+  File "helloworld.py", line 3, in <module>
+    from PyQt5 import QtWidgets
+ImportError: DLL load failed: 找不到指定的模块。
+```
+* 解决办法
+* https://www.cnblogs.com/double-t/archive/2019/06/04/10974220.html

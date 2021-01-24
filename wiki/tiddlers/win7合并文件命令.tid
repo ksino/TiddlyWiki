@@ -1,0 +1,88 @@
+created: 20200327080110778
+modified: 20201203092304013
+tags: win7
+title: win7合并文件命令
+type: text/vnd.tiddlywiki
+
+* `copy /b *.ts new.mp4`
+*> `/b`：二进制合并
+*> https://www.cnblogs.com/wpjamer/p/9160675.html
+
+<<copy-code """#coding:utf-8
+import os 
+
+class MergeVedioFile():
+    #用于合并夸克浏览器下载的m3u8视频文件
+    #提供根目录，可以合并多个视频目录
+    #程序修改目录下的文件名称，再用Windows的合并命令
+    def __init__(self, path):
+        # 获取当前路径
+        self.set_path(path)
+        self.vedio_name = "vedio"
+
+    def set_path(self, path):
+        if os.path.exists(path):
+            self.path =  path
+        else:
+            self.path = None
+
+    def list_path(self):
+        if self.path is None:
+            print("path is not exist")
+            return
+        #os.walk返回的是一个3个元素的元组 (root, dirs, files)
+        #分别表示遍历的路径名，该路径下的目录列表和该路径下文件列表
+        for root, dirs, files in os.walk(self.path):
+            # 如果文件数量为0， 则不合并视频目录
+            if len(files) > 0 and root != self.path:
+                self.merge(root, dirs, files)
+                pass
+            # print "root", self.root
+            # print "dir", self.dirs
+            # print "count", len(self.file)
+
+    def merge(self, root, dirs, files):
+        count = len(files)
+        self.prefix = self.get_prefix(files)
+        self.width = self.get_width(count)
+        self.rename_all(root, files)
+        file_path = os.path.join(root, self.prefix)
+        # 分割路径和文件夹
+        p, c = os.path.split(root)
+        video_name = "{}_{}.mp4".format(c[0:6], count)
+        video_path = os.path.join(self.path, video_name)
+        cmd = r"copy /b {}* {}".format(file_path, video_path)
+        # print(cmd)
+        os.system(cmd)
+
+    def get_prefix(self, files):
+        # 夸克缓存编号前十六位是统一编号
+        prefix = files[0][:16]
+        # print(prefix)
+        return prefix
+
+    def get_width(self, count):
+        #计算重命名时，文件名需要补充多少个0
+        return len(str(count - 1))
+
+    def rename_all(self, root, files):
+        for name in files:
+            new_name = self.rename(name)
+            if new_name is not None:
+                srt = os.path.join(root, name)
+                dst = os.path.join(root, new_name)
+                os.rename(srt, dst)
+
+    def rename(self, name):
+        if len(name) < 17:
+            return None
+        if len(name[16:]) == self.width:
+            return None
+        new_name = self.prefix + name[16:].zfill(self.width)
+        return new_name
+
+
+if __name__ == "__main__":
+    path = r"D:\Temp\mmm"
+    m = MergeVedioFile(path)
+    m.list_path()""" python>>

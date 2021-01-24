@@ -1,0 +1,29 @@
+created: 20191115041812961
+modified: 20200409011249776
+tags: Python
+title: pip
+type: text/vnd.tiddlywiki
+
+* 最新版本
+*> `pip install SomePackage`
+
+* 指定版本
+*> `pip install SomePackage==1.0.4 `
+
+* 最小版本
+*> `pip install 'SomePackage>=1.0.4'`
+
+* 卸载
+*> `pip uninstall package_name`
+
+* 指定升级版本
+*> `pip install --upgrade django==1.8.18`
+
+* 安装库列表
+*> `pip list`
+
+* 安装库信息
+*> `pip show package_name`
+
+* 安装本地whl文件
+*> `pip install CodeIntel-2.0.0-cp27-cp27m-win_amd64.whl`

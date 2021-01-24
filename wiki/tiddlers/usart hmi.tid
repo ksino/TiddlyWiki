@@ -1,0 +1,9 @@
+created: 20191206030212002
+modified: 20191206030646210
+tags: hmi
+title: usart hmi
+type: text/vnd.tiddlywiki
+
+!! 曲线控件
+* 宽度=格子宽度 * 数量 + 1
+* 高度=格子高度 * 数量 + 1

@@ -1,0 +1,31 @@
+created: 20200422051646154
+modified: 20200424062530178
+tags: [[The C Programming Language]] C
+title: The C Programming Language Note
+type: text/vnd.tiddlywiki
+
+* printf format
+|%d|decimal integer|
+|%6d|at least 6 character wide|
+|%f|floating point|
+|%.2f|2 characters after decimal point|
+|%o|octal|
+|%x|hexadecimal|
+|%c|character|
+|%s| character string|
+|%%|print %|
+
+* define constant
+>`#define LOWER  0`
+> recommend upper，前面`#`，后面没有`;`
+
+* EOF is -1
+> windows: <kbd>Ctrl</kbd> + <kbd>Z</kbd>
+
+* `int c = getchar();`
+> getchar return int
+
+* lower case for variable names
+* upper case for symbolic constants. 
+
+

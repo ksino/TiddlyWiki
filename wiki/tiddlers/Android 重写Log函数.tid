@@ -1,0 +1,43 @@
+created: 20190929101651060
+modified: 20191010102426952
+tags: android
+title: Android 重写Log函数
+type: text/vnd.tiddlywiki
+
+```java
+import android.util.Log;
+
+public class Print {
+    // 重写 Log
+    public static void v(String TAG, Object...args) {
+        for(int i=0; i<args.length; i++) {
+            Log.v(TAG, " <" + args[i] + "> ");
+        }
+    }
+
+    public static void d(String TAG, Object...args) {
+        for(int i=0; i<args.length; i++) {
+            Log.d(TAG, " <" + args[i] + "> ");
+        }
+    }
+
+    public static void i(String TAG, Object...args) {
+        for(int i=0; i<args.length; i++) {
+            Log.i(TAG, " <" + args[i] + "> ");
+        }
+    }
+
+    public static void w(String TAG, Object...args) {
+        for(int i=0; i<args.length; i++) {
+            Log.w(TAG, " <" + args[i] + "> ");
+        }
+    }
+
+    public static void e(String TAG, Object...args) {
+        for(int i=0; i<args.length; i++) {
+            Log.e(TAG, " <" + args[i] + "> ");
+        }
+    }
+}
+
+```

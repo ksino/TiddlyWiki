@@ -9,7 +9,7 @@ const userName = require('../package.json').userName;
 const repoFolder = path.join(path.dirname(__filename), '..');
 
 const tiddlyWikiFolder = path.join(repoFolder, wikiFolderName);
-// console.log("tiddlyWikiFolder", tiddlyWikiFolder)
+// console.log("---------------tiddlyWikiFolder", tiddlyWikiFolder)
 const tiddlersFolder = path.join(tiddlyWikiFolder, 'tiddlers');
 
 process.env['TIDDLYWIKI_PLUGIN_PATH'] = `${tiddlyWikiFolder}/plugins`;
@@ -22,7 +22,7 @@ $tw.boot.argv = [
   '--listen',
   `anon-username=${userName}`,
   `port=${tiddlyWikiPort}`,
-  'host=0.0.0.0',
+  'host=127.0.0.1',
   'root-tiddler=$:/core/save/lazy-images',
 ];
 

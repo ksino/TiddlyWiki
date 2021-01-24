@@ -1,0 +1,30 @@
+created: 20190517130018644
+modified: 20190517144123442
+tags: linux
+title: Linux添加用户
+type: text/vnd.tiddlywiki
+
+* 新建用户
+*> `useradd -m -s /bin/bash kim`
+
+* 更改密码
+*> `passwd kim`
+
+* 切换用户
+*> `su kim`
+* 删除用户
+*> `userdel kim`
+
+-----
+
+* sudo 权限
+*> `apt install sudo`
+
+
+* visudo命令是用来编辑修改/etc/sudoers配置文件
+*> `visudo`
+** 在这行的下面
+*> `root  ALL=(ALL)    ALL`
+**  添加对应的用户
+*> `kim ALL=(ALL)     ALL`
+

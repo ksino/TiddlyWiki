@@ -1,0 +1,24 @@
+created: 20190517130803698
+modified: 20191115020942915
+tags: linux
+title: zsh
+type: text/vnd.tiddlywiki
+
+# `apt install zsh`
+# `git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh`
+# `cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
+# 默认启动 zsh
+#> `chsh -s /bin/zsh`
+
+!! 编辑配置文件
+> `vim ~/.zshrc`
+
+* 禁用自动更新
+*> ` DISABLE_AUTO_UPDATE="true"`
+
+* 通配符的Bug
+*> `find . -name *.h`， `*`号匹配的搜索会有bug
+*> 添加  `setopt no_nomatch`
+
+* 执行
+*> `source ~/.zshrc`

@@ -1,0 +1,23 @@
+created: 20191121104049205
+modified: 20191122014559301
+tags: linux
+title: root登录
+type: text/vnd.tiddlywiki
+
+> 适用于Ubuntu
+
+*  `vim /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf`
+
+```
+user-session=ubuntu
+greeter-show-manual-login=true
+all-guest=false
+```
+
+*           `reboot`
+*  root用户登录，弹出错误
+*  `vim /root/.profile`
+
+```
+tty -s && mesg n || true
+```

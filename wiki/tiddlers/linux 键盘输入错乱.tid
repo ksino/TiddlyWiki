@@ -1,0 +1,8 @@
+created: 20191115005546555
+modified: 20191115005648034
+tags: linux
+title: linux 键盘输入错乱
+type: text/vnd.tiddlywiki
+
+# `sudo apt-get remove vim-common`
+# `sudo apt-get install vim`

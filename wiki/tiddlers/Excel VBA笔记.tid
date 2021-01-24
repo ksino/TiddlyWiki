@@ -1,0 +1,9 @@
+created: 20201026023905441
+modified: 20210123015340434
+tags: program vba
+title: Excel VBA笔记
+type: text/vnd.tiddlywiki
+
+* 数据类型
+*> 文本、数值、日期值、逻辑值、错误值
+* https://www.cnblogs.com/wzh313/articles/9737573.html

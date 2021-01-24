@@ -1,0 +1,38 @@
+created: 20190516150414227
+creator: Ksino Huang
+modified: 20200408075900852
+modifier: Ksino Huang
+tags: Wiki语法
+title: 图片
+tmap.id: 79f6723b-cf4f-4673-ac19-34d836e7545a
+type: text/vnd.tiddlywiki
+
+* 插入条目的内容
+*> `{{橘梨纱.jpg}}`
+
+{{橘梨纱.jpg}}
+
+* 从工具栏插入
+>* `[img[橘梨纱.jpg]]`
+
+[img[橘梨纱.jpg]]
+
+*可以指定提示文字
+*> `[img[a cat|https://tiddlywiki.com/favicon.ico]]`
+
+[img[a cat|https://tiddlywiki.com/favicon.ico]]
+
+*可以提供CSS属性,指定宽度和高度
+*> `[img width=32 class="tc-image" [橘梨纱.jpg]]`
+
+[img width=32 class="tc-image" [橘梨纱.jpg]]
+
+
+[img width=120 class="tc-image" [https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1571906292&di=d4c3804d2b423f04559fceb285e3a766&src=http://wx2.sinaimg.cn/crop.0.0.1797.1009.1000/005NLzplly1fvf2rfe838j31jm0s2gv8.jpg]]
+
+
+[img width=300 [https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1572077296&di=f8d57a0ed285adf3e08122803a9c6fdf&src=http://hbimg.b0.upaiyun.com/6b0018f329217b50b48d9478776a24c9825cbef7cd86-IrED2R_fw658]]
+
+* 插入图片到条目
+*> 直接拖动图片到浏览器，导入即可。
+*> 或者复制粘贴

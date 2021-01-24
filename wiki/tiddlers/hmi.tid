@@ -1,0 +1,50 @@
+created: 20191203074539600
+modified: 20200415103953760
+tags: hmi
+title: hmi
+type: text/vnd.tiddlywiki
+
+!! 串口软件连接hmi屏幕
+* 串口软件必需加上结束符`FF FF FF`
+* 使用软件连接对应的com端口
+*> eaglecom
+*> `page main \FF \FF \FF`
+*> sscom
+*> 点击`扩展`，勾选`hex`，输入 `FF FF FF`
+*> 发送一个命令后，点击`FF FF FF`对应的右边标签
+
+!! [[指令集|http://wiki.tjc1688.com/doku.php?id=6.%E6%8C%87%E4%BB%A4%E9%9B%86:1.%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E9%9B%86]]
+
+* 跳转
+*> `page 0`
+*> `page main`
+
+* 存储变量
+*> `wepo "abcd",10`
+*> `page main`
+
+* 数字与字符串互转
+`covx `
+
+```
+covx att1,att2,lenth,format
+
+att1:源变量
+
+att2:目标变量
+
+lenth:字符串的长度(0为自动长度，非0为固定长度)
+
+format:申明数值类型(0-数字;1-货币;2-Hex)
+```
+
+!! [[HMI书写语法|http://wiki.tjc1688.com/doku.php?id=6.%E6%8C%87%E4%BB%A4%E9%9B%86:2.%E4%B9%A6%E5%86%99%E8%AF%AD%E6%B3%95]]
+
+<<copy-code """for(sys0=1;sys0<9;sys0++)
+{
+if(sys0!=6||sys0!=7)
+{
+  // 文字左对齐
+  // sys0是控件的id，不是objname
+  b[sys0].xcen=0
+}""">>

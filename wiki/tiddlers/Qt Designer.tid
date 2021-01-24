@@ -1,0 +1,19 @@
+created: 20190628105134856
+modified: 20201125030315239
+tags: pyqt qt
+title: Qt Designer
+type: text/vnd.tiddlywiki
+
+* label 添加边框 `QFrame` -> `FrameShape`
+* 预览的快捷键 `Ctrl + R`
+*  允许拖放
+*> `setAcceptDrops(true)`
+
+!! 添加图标
+* 打开：菜单栏->view->Action Editor
+* 添加图标
+* 拖拽到工具栏或者菜单
+
+!! 文件格式的转化
+> Qt Designer 生成 `.ui`，`.rcc` 需要转化为 `.py` 文件才能使用
+>详细参考[[pycharm集成pyqt]]

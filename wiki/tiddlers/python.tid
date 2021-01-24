@@ -1,0 +1,13 @@
+created: 20190629012219153
+modified: 20200409032113130
+tags: menu
+title: Python
+type: text/vnd.tiddlywiki
+
+<ul>
+  <$list filter="[tag[Python]sort[time]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>

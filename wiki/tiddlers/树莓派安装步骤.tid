@@ -1,0 +1,62 @@
+created: 20191203061518306
+modified: 20200408135624683
+tags: raspberry
+title: 树莓派安装步骤
+type: text/vnd.tiddlywiki
+
+!! 烧录系统
+* [[Download|https://www.raspberrypi.org/downloads/raspbian/]]镜像
+* win32diskimager 软件中选择系统镜像（img文件）
+
+!! 无显示器
+
+!!! 指定ip
+* 从路由器指定IP地址
+* ipscan22.exe扫描ip
+
+!!! SSH的连接
+
+> [[树莓派新系统SSH连接被拒绝的解决方法|http://shumeipai.nxez.com/2017/02/27/raspbian-ssh-connection-refused.html]]
+
+* SD卡拔下来，进入到根目录，新建一个名为ssh的空白文件。
+*> `new-item ssh -type file`--powershell
+*>  `touch ssh`--cmder
+* Raspbian默认的用户名密码是`pi/raspberry`
+
+!!! [[设置无线上网|http://shumeipai.nxez.com/2016/09/17/raspberry-pi-set-up-a-wireless-internet-access.html]]
+> [[参考|https://baijiahao.baidu.com/s?id=1616154973730190476&wfr=spider&for=pc]]
+>* `sudo vi /etc/wpa_supplicant/wpa_supplicant.conf`
+
+> 新建`wpa_supplicant.conf`
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+    ssid="901"
+    psk="qwert12345"
+}
+```
+
+!! 资料
+* [[树莓派学习笔记|https://blog.csdn.net/xukai871105/article/details/23115627]]
+* [[树莓派3B--学习路线和资料汇总|https://blog.csdn.net/qq_38880380/article/details/78980463]]
+
+!! https://www.jianshu.com/p/67b9e6ebf8a0一键换软件源
+
+```
+sudo sed -i 's#://raspbian.raspberrypi.org#s://mirrors.tuna.tsinghua.edu.cn/raspbian#g' /etc/apt/sources.list
+sudo sed -i 's#://archive.raspberrypi.org/debian#s://mirrors.tuna.tsinghua.edu.cn/raspberrypi#g' /etc/apt/sources.list.d/raspi.list
+```
+
+!! https://blog.csdn.net/u011677255/article/details/72040704 静态ip
+
+!! [[设置时区|https://blog.csdn.net/github_38111866/article/details/76057237]]
+`sudo dpkg-reconfigure tzdata` -> `Asia` -> `shanghai`
+
+* 查看cpu温度
+*> `cat /sys/class/thermal/thermal_zone0/temp`
+*> 实时查看
+*> `watch -n 0.1 cat /sys/class/thermal/thermal_zone0/temp`

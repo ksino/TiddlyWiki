@@ -1,0 +1,19 @@
+created: 20190517025838674
+creator: Ksino Huang
+modified: 20191023014859519
+modifier: Ksino Huang
+tags: linux
+title: scp 传送文件
+type: text/vnd.tiddlywiki
+
+!! 本地到远端
+* 文件
+> `scp file user@ip:path`
+
+* 目录
+> `scp -r local_folder remote_username@remote_ip:remote_folder`
+
+
+!! 远端到本地
+
+> `scp root@192.168.120.204:/opt/soft/nginx-0.5.38.tar.gz /opt/soft/`

@@ -1,0 +1,25 @@
+created: 20200824012017390
+modified: 20200901082555014
+tags: work
+title: H320带宽偏差范围
+type: text/vnd.tiddlywiki
+
+* 出现10M报警为20M是因为计算的误差
+
+*> abs(end - begin_freq + 1 - bandwidth)  <= 容差
+
+* 10M 容差
+*> <<green "t = 0">>  <<red " [9, 9]">>
+*> <<green "t = 1">>  <<red " [8, 10]">>
+*> <<green "t = 2">>  <<red " [7, 11]">>
+*> <<green "t = 3">>  <<red " [6, 12]">>
+*> <<green "t = 4">>  <<red " [5, 13]">>
+*> <<green "t = 5">>  <<red " [4, 14]">>
+* 20M 容差
+*> <<green "t = 2 ">>  <<red "[17, 21]">>
+*> <<green "t = 3 ">>  <<red "[16, 22]">>
+*> <<green "t = 4 ">>  <<red "[15, 23]">>
+*> <<green "t = 5 ">>  <<red "[14, 24]">>
+*> <<green "t = 6 ">>  <<red "[13, 25]">>
+*> <<green "t = 7 ">>  <<red "[12, 26]">>
+*> <<green "t = 8 ">>  <<red "[11, 27]">>

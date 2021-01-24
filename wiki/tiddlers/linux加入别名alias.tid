@@ -1,0 +1,18 @@
+created: 20200414015940143
+modified: 20200414020400692
+tags: linux
+title: linux加入别名alias
+type: text/vnd.tiddlywiki
+
+
+* 查看当前别名
+*> `alias`
+* 添加别名
+*> `alias pan="~/Downloads/BaiduPCS/BaiduPCS-Go"  `
+* bash
+*> `sudo vim ~/.bashrc`
+*> `source ~/.bashrc`
+
+* zsh
+*> `sudo vim ~/.zshrc`
+*> `source ~/.zshrc`

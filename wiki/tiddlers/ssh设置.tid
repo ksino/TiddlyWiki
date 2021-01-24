@@ -1,0 +1,89 @@
+created: 20190517151855807
+modified: 20191106014110301
+tags: linux
+title: SSH设置
+type: text/vnd.tiddlywiki
+
+!! 检查SSH服务是否已启动
+> Ubuntu系统默认是没有SSH服务的，故要检查SSH服务是否已安装。
+> [[参考|https://www.cnblogs.com/asyang1/p/9467646.html]]
+
+```bash
+ps -e | grep ssh
+
+#  7529 ?        00:00:00 sshd
+#  7852 pts/1    00:00:00 ssh
+# 若输入指令后显示类似于上图所示，则说明SSH服务已启动
+# 其中sshd表示ssh-server已启动，ssh表示ssh-client已启动
+```
+
+!! 安装SSH服务
+
+```bash
+# 1.客服端
+sudo apt-get install openssh-client
+# 2.服务端
+sudo apt-get install openssh-server
+
+```
+
+!! 启动SSH服务
+
+```bash
+sudo /etc/init.d/ssh start
+# 检测是否已启动
+ps -e | grep ssh
+```
+
+!! 修改SSH配置文件
+
+```bash
+sudo gedit /etc/ssh/sshd_config
+```
+
+
+!! ssh开机自动启动
+
+
+```bash
+# 开机自动启动ssh命令
+sudo systemctl enable ssh
+
+# 关闭ssh开机自动启动命令
+sudo systemctl disable ssh
+
+# 单次开启ssh
+sudo systemctl start ssh
+
+# 单次关闭ssh
+sudo systemctl stop ssh
+
+# 设置好后重启系统
+reboot
+
+#查看ssh是否启动，看到Active: active (running)即表示成功
+sudo systemctl status ssh
+```
+
+
+!! ssh-key免密登录
+*`ssh-keygen -C vultr`
+*> `-C` 后面的名字随便取，只是让你认出是那个`key`
+*> id_rsa 是私钥 自己保存 不要给别人看
+*> id_rsa.pub 是公钥, 是要到处使用的
+* `cd ~/.ssh`
+* 将`id_rsa.pub`的内容复制到服务器`~/.ssh/authorized_keys` 文件中
+
+[[Ubuntu环境下SSH服务安装、SSH远程登录以及SSH数据传输|https://www.cnblogs.com/asyang1/p/9467646.html]]
+
+!! win7
+* ssh-key路径
+*> `C:/Users/Administrator/.ssh/`
+
+* cmder 可以直接访问SSH
+*> `ssh ubuntu@123.207.18.80`
+
+!! 禁止ssh密码登录
+*`sudo vim /etc/ssh/sshd_config`
+*> `PasswordAuthentication no`
+*> 禁用密码验证

@@ -1,0 +1,13 @@
+created: 20200422073323203
+modified: 20200422073453557
+tags: C
+title: The C Programming Language
+type: text/vnd.tiddlywiki
+
+<ul>
+  <$list filter="[tag[The C Programming Language]sort[title]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>

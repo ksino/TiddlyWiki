@@ -1,0 +1,10 @@
+created: 20200825095509275
+modified: 20210123015630925
+tags: pyqt program
+title: pyqt菜单隐藏
+type: text/vnd.tiddlywiki
+
+[[https://blog.csdn.net/hughen_/article/details/8169122]]
+
+<<copy-code """# 隐藏右键菜单 view all
+QAction.setVisible(False)""" python>>

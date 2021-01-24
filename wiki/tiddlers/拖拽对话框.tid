@@ -1,0 +1,36 @@
+created: 20190604092611745
+modified: 20200409011231613
+tags: JavaScript
+title: 拖拽对话框
+type: text/vnd.tiddlywiki
+
+```javascript
+var moveElement = function(element) {
+    var dragging = false
+    var position = null
+
+    element.addEventListener('mousedown', function(e) {
+        dragging = true
+        position = [e.clientX, e.clientY]
+    })
+
+    document.addEventListener('mousemove', function(e){
+        if(dragging === false) {
+            return
+        }
+        const x = e.clientX
+        const y = e.clientY
+        const deltaX = x - position[0]
+        const deltaY = y - position[1]
+        const left = parseInt(element.style.left || 0)
+        const top = parseInt(element.style.top || 0)
+        element.style.left = left + deltaX + 'px'
+        element.style.top = top + deltaY + 'px'
+        position = [x, y]
+    })
+
+    document.addEventListener('mouseup', function(e){
+        dragging = false
+    })
+}
+```

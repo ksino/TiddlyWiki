@@ -1,0 +1,14 @@
+created: 20200414014116021
+modified: 20210123015046582
+tags: program
+title: 树莓派的百度网盘下载命令
+type: text/vnd.tiddlywiki
+
+! [[BaiduPCS-Go|https://github.com/iikira/BaiduPCS-Go]]
+* 显示文件
+*> `BaiduPCS-Go ls`
+* 更改目录
+*> `BaiduPCS-Go cd 某个文件夹`
+* 下载
+*> `BaiduPCS-Go d 网盘内的文件名称 --saveto 保存路径`
+*> `~/Downloads/BaiduPCS/BaiduPCS-Go d Alice.In.Wonderland.1951.1080p.BluRay.x264-CiNEFiLE.mkv --saveto /media/pi/EasyU/nas/`

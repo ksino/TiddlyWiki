@@ -1,0 +1,11 @@
+created: 20200407030510601
+modified: 20200407030915526
+tags: win7
+title: NSIS Error:Error writing temporary file
+type: text/vnd.tiddlywiki
+
+* 卸载软件提示
+*> NSIS Error: "Error writing temporary file. Make sure your temp folder is valid.
+* 命令行进入到需要卸载的程序路径，执行以下命令
+*> `icacls . /setintegritylevel H`
+*> [[参考|https://blog.csdn.net/rainbow702/article/details/84162777]]

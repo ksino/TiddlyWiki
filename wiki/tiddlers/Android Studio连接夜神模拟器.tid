@@ -1,0 +1,17 @@
+created: 20190823102950029
+modified: 20191210023141679
+tags: android
+title: Android Studio连接夜神模拟器
+type: text/vnd.tiddlywiki
+
+* 启动android studio
+
+* 启动夜神模拟器 
+* cmd打开命令行窗口 
+* 执行命令连接模拟器
+*> `D:\Program\Nox\bin\nox_adb.exe connect 127.0.0.1:62001`
+
+* 在Android Studio窗口上点击run ‘app’(或shift+F10)，点击OK即可在模拟器上运行app 
+
+* [[adb 连接模拟器不成功 查看adb的版本是否一致|https://jingyan.baidu.com/article/cb5d6105a3365f005c2fe0f7.html]]
+

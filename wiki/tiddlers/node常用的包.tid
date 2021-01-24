@@ -1,0 +1,19 @@
+created: 20191126011951041
+modified: 20191220141847518
+tags: node
+title: node常用的包
+type: text/vnd.tiddlywiki
+
+* tiddlywiki
+*> [[Node 安装Tiddly Wiki]]
+
+* 有道命令行
+*> `npm install -g yddict`
+** [[设置输出颜色|https://github.com/kenshinji/yddict]]
+**> `用户主目录下.config/configstore/yddict.json`
+```
+{
+  "proxy":"http://<主机地址>:<端口>" //代理设置
+  "color":"<自定义显示颜色>" //自定义字体颜色显示，默认白色
+}
+```

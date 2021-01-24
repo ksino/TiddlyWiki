@@ -1,0 +1,13 @@
+created: 20200720012849204
+modified: 20200720013839392
+tags: menu
+title: reading
+type: text/vnd.tiddlywiki
+
+<ul>
+  <$list filter="[tag[reading]sort[title]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>

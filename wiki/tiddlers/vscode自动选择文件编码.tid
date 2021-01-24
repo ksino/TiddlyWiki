@@ -1,0 +1,14 @@
+created: 20200414032042894
+modified: 20200414032657857
+tags: vscode
+title: vscode自动选择文件编码
+type: text/vnd.tiddlywiki
+
+[[stack overflow|https://stackoverflow.com/questions/38528384/how-to-setup-visual-studio-code-detect-and-set-correct-encoding-on-file-open]]
+
+* 修改settings.json
+*> `"files.autoGuessEncoding":true`
+** 便携版路径
+**> `D:\Program\VSCode-win32-x64-1.43.2\data\user-data\User\settings.json`
+** 安装版路径
+**> `%appdata%\Code\User\settings.json`

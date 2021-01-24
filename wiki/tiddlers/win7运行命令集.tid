@@ -1,0 +1,45 @@
+created: 20191223073756416
+modified: 20191223075355128
+tags: win7
+title: win7运行命令集
+type: text/vnd.tiddlywiki
+
+!! <kbd>Win</kbd> + <kbd>R</kbd>
+
+* 计算器
+*>  `calc`
+
+* 命令行
+*> `cmd`
+
+* 资源管理器
+*> `explorer`
+
+* 远程桌面连接
+*> `mstsc`
+
+* 系统配置实用程序
+*> `msconfig`
+
+* 画图板
+*> `mspaint`
+
+* 记事本
+*> `notepad`
+* 注册表
+*> `regedit`
+
+* 任务管理器
+*> `taskmgr`
+
+* 写字板
+*> `write`
+
+* 提供强大远程处理能力
+*> `powershell`
+
+* 截图工具，支持无规则截图
+*> `snippingtool`
+
+* 画图板
+*> `mspaint`

@@ -1,0 +1,29 @@
+created: 20190516025833971
+creator: ksino.H
+modified: 20200409011212007
+modifier: Ksino Huang
+tags: TiddlyWiki
+title: Node安装Tiddlywiki
+tmap.id: 751c8daf-c380-4355-bf00-eccf618065e1
+type: text/vnd.tiddlywiki
+
+>  [[TiddlyWiki Github|https://github.com/Jermolene/TiddlyWiki5]]
+
+
+* 安装
+*> `npm install -g tiddlywiki`
+
+* 新建一个wiki
+*> `tiddlywiki wiki --init server`
+
+* 启动
+*> `tiddlywiki wiki --listen`
+
+* 指定端口
+*> `tiddlywiki wikipath --listen username=jeremy port=8090`
+
+* 导出html文件
+*> `tiddlywiki wiki --build index`
+
+* 更新
+*> `npm update -g tiddlywiki`

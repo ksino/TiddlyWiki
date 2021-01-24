@@ -1,0 +1,18 @@
+created: 20190518022223675
+creator: ksino.H
+modified: 20191106020557038
+modifier: ksino.H
+tags: linux editor
+title: vim
+type: text/vnd.tiddlywiki
+
+
+!! 安装
+> 参考：https://github.com/chxuan/vimplus
+*安装vimplus(建议在`普通用户`下安装)
+
+* `git clone https://github.com/chxuan/vimplus.git ~/.vimplus`
+* `cd ~/.vimplus`
+* `./install.sh`
+
+

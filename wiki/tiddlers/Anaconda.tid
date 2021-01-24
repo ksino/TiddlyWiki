@@ -1,0 +1,22 @@
+created: 20190620024939916
+modified: 20200409011249791
+tags: Python
+title: Anaconda
+type: text/vnd.tiddlywiki
+
+!! 安装指定包
+> `conda install package=version`
+
+!! 虚拟环境
+* 新建
+*> `conda create -n envName python=2`
+* 激活
+*> `active envName`
+* 关闭
+*> `deactive envName`
+
+
+!! 清华镜像源
+* `conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/`
+* `conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/`
+* `conda config --set show_channel_urls yes`

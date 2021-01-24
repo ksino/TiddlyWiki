@@ -1,0 +1,7 @@
+created: 20191119091034451
+modified: 20191119091113496
+tags: linux
+title: 设置root的密码
+type: text/vnd.tiddlywiki
+
+`sudo passwd root`

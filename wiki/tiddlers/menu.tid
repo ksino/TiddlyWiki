@@ -1,0 +1,16 @@
+caption: {{$:/language/SideBar/Contents/Caption}}
+created: 20191024093845704
+creator: Ksino Huang
+list: menu
+list-after: $:/core/ui/SideBar/Open
+modified: 20200720012846361
+modifier: Ksino Huang
+tags: $:/tags/SideBar
+title: menu
+type: text/vnd.tiddlywiki
+
+<div class="tc-table-of-contents">
+
+<<toc-selective-expandable 'menu'>>
+
+</div>

@@ -6,7 +6,7 @@ const wikiFolderName = require('../package.json').name;
 const repoFolder = path.join(path.dirname(__filename), '..');
 
 const tiddlyWikiFolder = path.join(repoFolder, wikiFolderName);
-
+console.log("---------tiddlyWikiFolder", tiddlyWikiFolder)
 // cross-env TIDDLYWIKI_PLUGIN_PATH='node_modules/tiddlywiki/plugins/published' TIDDLYWIKI_THEME_PATH='${wikiFolderName}/themes'
 process.env['TIDDLYWIKI_PLUGIN_PATH'] = `${tiddlyWikiFolder}/plugins`;
 process.env['TIDDLYWIKI_THEME_PATH'] = `${tiddlyWikiFolder}/themes`;

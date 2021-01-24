@@ -1,0 +1,18 @@
+created: 20190808094555070
+modified: 20190808095103548
+tags: numpy
+title: 等差数据
+type: text/vnd.tiddlywiki
+
+* `arange(start=None, stop=None, step=None, dtype=None)`
+* ` linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)`
+
+```python
+import numpy as np
+
+np.arange(0, 10, 2)
+array([0, 2, 4, 6, 8])
+
+ np.linspace(0, 10, 5)
+ array([  0. ,   2.5,   5. ,   7.5,  10. ])
+```

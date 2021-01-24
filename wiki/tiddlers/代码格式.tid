@@ -1,0 +1,30 @@
+created: 20200408024359066
+creator: Ksino Huang
+modified: 20200414065947054
+modifier: Ksino Huang
+tags: Wiki语法
+title: 代码格式
+tmap.id: cfacd3d9-95ca-44da-93c2-1cf5ec29f094
+type: text/vnd.tiddlywiki
+
+* 使用三个反引号<code>&#96;&#96;&#96;</code>
+*> 反引号后可以加上语言种类，如python javascript
+*> 反引号前后要空一行
+
+<pre>
+&#96;&#96;&#96;python
+# this is comment
+print("comment")
+&#96;&#96;&#96;
+</pre>
+
+显示结果：
+
+```python
+# this is comment
+print("comment")
+```
+
+* 还可以自定义宏，如加上复制代码
+<<copy-code """# this is comment
+print("comment")""" python>>

@@ -1,0 +1,20 @@
+created: 20190516145926510
+creator: Ksino Huang
+modified: 20200408075900820
+modifier: Ksino Huang
+tags: Wiki语法
+title: 换行
+tmap.id: 6a45dafd-c8e5-4ecc-b22a-6a76d2bf793f
+type: text/vnd.tiddlywiki
+
+! 换行
+通常段落的处理会导致单个换行符被忽略，且连续两个换行符被解释为一个段落的结束
+这种行为不太方便处理包含了换行符的题材 - 例如，诗歌。您可以标记一个包含分行符号的区块，像这样：
+
+<<wikitext-example src:'"""
+This is a line
+and this is a new line
+while this is yet another line
+and this is the final one
+apart from this one
+"""'>>

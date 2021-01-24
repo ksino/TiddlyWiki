@@ -1,0 +1,21 @@
+created: 20190517181128063
+creator: ksino.H
+modified: 20190518000526951
+modifier: ksino.H
+tags: node
+title: debian安装node.js
+type: text/vnd.tiddlywiki
+
+* 参考
+* [[如何在Debian 9上安装Node.js|https://www.howtoing.com/how-to-install-node-js-on-debian-9]]
+*[[github|https://github.com/nvm-sh/nvm]]
+* nmv
+* `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
+*> `~/.zshrc` 添加下面代码，`zsh` 才能使用 `node` 
+**> """
+export NVM_DIR=~/.nvm
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+"""
+* `nvm ls-remote`
+*> 查看版本
+*`nvm install 10.15.3`

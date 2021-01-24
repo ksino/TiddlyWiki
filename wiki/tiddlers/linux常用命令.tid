@@ -1,0 +1,66 @@
+created: 20191115022025990
+modified: 20191115024712552
+tags: linux command
+title: linux常用命令
+type: text/vnd.tiddlywiki
+
+# 帮助文档
+#> 命令后接 `--help`
+#> `ls --help`
+
+# 显示文件或目录
+#> 仅列出当前目录可见文件 `ls`
+#> 列出当前目录可见文件详细信息 `ls -l`
+#> 列出详细信息并以可读大小显示文件大小 `ls -hl`
+#> 列出所有文件（包括隐藏）的详细信息 `ls -al`
+
+
+# 创建目录
+#> `mkdir`
+#> `mkdir -p folder/subfolder`
+#> `-p` 参数为当父目录存在时忽略，若不存在则建立，用此参数可建立多级文件夹
+
+# 切换目录
+#> `cd`    进入用户主目录 
+#> `cd ~ `   进入用户主目录 
+#> `cd -`    返回进入此目录之前所在目录 
+#> `cd ..`    返回上一级目录 
+#> `cd ../..`  返回上两级目录 
+#> `cd !$ `   把上个命令的参数作为cd 参数使用 
+#> `cd /`    进入根目录
+#> `cd .`    当前目录
+
+# 创建空文件
+#> `touch 文件名`
+
+# 创建带有内容的文件
+#> `echo`
+
+# 输出文件内容到
+#> `cat /etc/locale.gen` 输出 locale.gen 的内容
+#> `cat -n /etc/locale.gen`  输出 locale.gen 的内容并显示行号
+
+# 复制文件
+#> `cp source dest` source 复制到 dest
+#> `cp folder/*  dest` folder 下所有文件(`不含`子文件夹中的文件)复制到 dest
+#> `cp -r folder  dest` folder 下所有文件（包含子文件夹中的`所有文件`）复制到 dest
+
+# 移动或重命名
+#> `mv`
+
+# 删除文件   
+#> `rm -r file` 递归删除，可删除子目录及文件
+#> `rm -f file`  强制删除
+
+# 显示当前目录
+#> `pwd`
+
+#
+#>
+#>
+#>
+
+#
+#>
+#>
+#>

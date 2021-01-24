@@ -1,0 +1,21 @@
+created: 20191125085348851
+modified: 20210123015240450
+tags: work android
+title: tiny4412 android系统在电脑安装驱动
+type: text/vnd.tiddlywiki
+
+> [[参考|https://blog.csdn.net/riyuexingchen1204/article/details/84594061]]
+> 先设置[[Android Studio连接手机]]
+
+# 计算机 -->  右击 --> 管理 --> 设备管理器
+# 双击带黄色感叹号的ADB Interface（或者是对应的安卓手机名称）
+# 点击更新驱动程序
+# 点击：`浏览计算机以查找驱动程序软件`
+# 点击：`从计算机的设备驱动程序列表中选择`
+# 点击：下一步
+# 从磁盘安装
+# 对话框中选择`浏览`。选择电脑上的Android SDK目录中的android_winusb.inf 文件
+#> android_winusb.inf 位置在 %SDK目录%/extras/google/usb_driver 目录中
+#> 例如`D:\Program\Android\Sdk\extras\google\usb_driver\android_winusb.inf`
+# 下一步
+# 会有警告提示，点击是

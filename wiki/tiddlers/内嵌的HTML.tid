@@ -1,0 +1,23 @@
+created: 20200408041059234
+creator: Ksino Huang
+modified: 20200408075900864
+modifier: Ksino Huang
+tags: Wiki语法
+title: 内嵌的HTML
+tmap.id: e7ecb988-66eb-4fa0-8152-3969a14f623c
+type: text/vnd.tiddlywiki
+
+HTML的标记与注释可在WikiText中直接使用，例如
+
+```
+<article class="hello">
+This is my nice and simple block of text. HelloThere
+<!-- This comment will not appear in the wikified output -->
+</article>
+```
+
+<article class="hello">
+This is my nice and simple block of text. HelloThere
+<!-- This comment will not appear in the wikified output -->
+</article>
+

@@ -1,0 +1,8 @@
+created: 20190929095856261
+modified: 20190929100554817
+tags: android
+title: Litepal
+type: text/vnd.tiddlywiki
+
+* [[LitePal|https://github.com/LitePalFramework/LitePal]]采用了对象关系映射(ORM)的模式
+* 并将我们平时开发时最常用到的一些数据库功能进行了封装。

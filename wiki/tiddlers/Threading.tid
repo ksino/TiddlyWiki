@@ -1,0 +1,24 @@
+created: 20190815052454101
+modified: 20200409011249713
+tags: Python
+title: Threading
+type: text/vnd.tiddlywiki
+
+```python
+# 导入Python标准库中的Thread模块 
+import threading 
+# 创建一个线程 
+mthread = threading.Thread(target=function_name, args=(parameter1, parameter2)) 
+# 启动刚刚创建的线程 
+mthread .start()
+```
+
+* Timer
+```python
+def one():
+    print('hello')
+    t = threading.Timer(1, one)
+    t.start()
+    # t.cancel()
+    # 停止timer，并取消timer动作的执行。在timer启动之前才有效。
+```

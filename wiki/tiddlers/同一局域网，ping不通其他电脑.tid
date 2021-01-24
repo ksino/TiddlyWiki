@@ -1,0 +1,7 @@
+created: 20191112012723802
+modified: 20191112013203251
+tags: win7
+title: 同一局域网，ping不通其他电脑
+type: text/vnd.tiddlywiki
+
+`控制面板` → `系统和安全` → `Windows防火墙` → `高级设置` → `入站规则` → `文件和打印机共享（回显请求 - ICMPv4-In）`右键为`启用 规则`

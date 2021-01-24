@@ -1,0 +1,32 @@
+created: 20191112073712569
+modified: 20200722010334820
+tags: Python Work
+title: commandcenter的python配置
+type: text/vnd.tiddlywiki
+
+!! 
+
+* Anaconda2
+* pycharm
+* `Visual C++ Redistributable 2015`
+*> 如果pycharm打不开，安装
+
+!! [[设置ThinkRF的Python开发环境|http://note.youdao.com/noteshare?id=4d6fc0dcc5dc1090ba8c7e03b46b89bd&sub=6717BF1D68134A88B229B1EE070BB084]]
+> [[pyrf document|http://www.pyrf.org/en/latest/usermanual.html#installation]]
+> 按照下面的步骤，工程可以正常运行。如果缺少的库就安装
+
+
+```bash
+#创面目录 c:\CODE\ThinkRF，并进入该目录
+#下载源代码并安装
+git clone git://github.com/pyrf/pyrf.git
+cd pyrf
+python setup.py install
+```
+
+* `libiio-0.18.g4e22517-Windows-setup.exe`
+* `pip install pycrc`
+* `pip install serial`
+* `pip install pyaudio`
+* `pip install pyqtgraph`
+* `pip install crc8`

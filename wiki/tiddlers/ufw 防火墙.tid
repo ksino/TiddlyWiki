@@ -1,0 +1,23 @@
+created: 20190517155407916
+modified: 20190517160053834
+tags: linux
+title: ufw 防火墙
+type: text/vnd.tiddlywiki
+
+*安装 配置 打开 ufw 防火墙
+*> `sudo apt-get install ufw`
+
+* 一般配置
+*> 别忘记翻墙的端口
+```
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw allow 13362
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw status verbose
+sudo ufw enable
+```
+*取消ufw
+*> `sudo ufw disable`

@@ -1,0 +1,8 @@
+created: 20201126094852455
+modified: 20210123015402328
+tags: program
+title: C笔记
+type: text/vnd.tiddlywiki
+
+* 执行C文件
+*> `gcc hello.c -o hello && hello`

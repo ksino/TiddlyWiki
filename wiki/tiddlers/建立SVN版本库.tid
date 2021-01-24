@@ -1,0 +1,19 @@
+created: 20201124022001541
+modified: 20201125010300009
+tags: svn
+title: 建立SVN版本库
+type: text/vnd.tiddlywiki
+
+
+! 建立版本库 
+!! 命令行
+> `svnadmin create 路径`
+<<copy-code """svnadmin create MotherBoard_Gun""">>
+
+!! 界面
+* 新建文件夹
+* 右键 ->`TortoiseSVN` -> `Create respository here` -> 点击OK
+* 查看SVN地址
+*> 右键 -> Tortois-eSVN -> Repo-browser
+
+!! 正常的checkout即可

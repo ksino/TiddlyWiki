@@ -1,0 +1,14 @@
+created: 20191112013307841
+modified: 20200909024500486
+tags: win7
+title: win7远程桌面关机
+type: text/vnd.tiddlywiki
+
+* 关机 `shutdown -s -t 0`
+*> `-t`后面对应的是等待时间
+
+<<copy-code """shutdown -s -t 0""" >>
+
+* 重启 `shutdown -r -t 0`
+
+<<copy-code """shutdown -r -t 0""" >>

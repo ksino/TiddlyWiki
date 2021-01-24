@@ -1,0 +1,30 @@
+created: 20191118023156257
+modified: 20191210105202376
+tags: java
+title: java数组打印
+type: text/vnd.tiddlywiki
+
+> [[Java数组的三种打印方式|https://blog.csdn.net/chenkaibsw/article/details/78989459]]
+
+* 传统的for循环方式
+
+```java
+for(int i=0;i<array.length;i++)
+{
+      System.out.println(array[i]);
+}
+```
+
+* for each循环
+
+```java
+for(int a:array)
+    System.out.println(a);
+```
+
+* 利用Array类中的toString方法
+
+```java
+int[] array = {1,2,3,4,5};
+System.out.println(Arrays.toString(array));
+```

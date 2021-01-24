@@ -1,0 +1,22 @@
+created: 20191212013111554
+modified: 20191212014341733
+tags: kicad
+title: kicad librarys
+type: text/vnd.tiddlywiki
+
+!! 1. 官方库
+
+* 在安装KiCad的时候，KiCad会默认同时安装官方的元件符号库到
+*> `C:\Program Files\KiCad\share\kicad\library`
+*> [[官方库|https://kicad.github.io/symbols/]]
+
+
+!! 2. 第三方库
+* [[Digi-Key元件库|https://github.com/digikey/digikey-kicad-library/]]
+*> 包括了元件在Digi-key上的料号、厂家料号（MPN）、数据手册等多种信息，便于生成物料清单BOM
+
+* [[SparkFun元件库|https://github.com/sparkfun/SparkFun-KiCad-Libraries]]
+*> SparkFun出品，由Eagle生成的KiCad元件库
+
+* [[SnapEDA元件库|https://www.snapeda.com/kicad/]]
+*> 可以根据自己的需求，单独搜索某个元件的符号和封装，以KiCad的格式导出下载

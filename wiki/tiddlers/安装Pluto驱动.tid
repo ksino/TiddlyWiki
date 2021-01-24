@@ -1,0 +1,23 @@
+created: 20200402110446855
+modified: 20200402112158941
+tags: qt
+title: 安装Pluto驱动
+type: text/vnd.tiddlywiki
+
+> 模拟无人机信号
+
+!! 安装以下软件（驱动）
+*> `D:\Software\Develop\下位机\Pluto\adi-osc-setup.exe`
+*> `D:\Software\Develop\下位机\Pluto\libiio-0.18.g4e22517-Windows-setup.exe`
+*>  `D:\Software\Develop\下位机\Pluto\PlutoSDR-M2k-USB-Drivers.exe`
+
+!! 打开`IIO Oscilloscope`
+*> 如果`确定`不能点击，刷新一下
+*> 这个软件具体作用不知道，只是叶工这样操作了一下
+[img[pluto.png]]
+
+!! 描述
+* 打开python的项目，点击信号发生器
+* 只有IQ数据的模式才可以测试（不确定）
+*> 需要打开数据文件，路径`D:\Work\CommandCenter\dsp\waveforms`
+*> 设置对应的参数即可

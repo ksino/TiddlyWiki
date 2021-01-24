@@ -1,0 +1,63 @@
+created: 20200408032952823
+creator: Ksino Huang
+modified: 20200408075900766
+modifier: Ksino Huang
+tags: Wiki语法
+title: 清单
+tmap.id: 7ea4aaa0-9cde-4a51-9776-6f81f4b548e8
+type: text/vnd.tiddlywiki
+
+!! 符号
+
+* 符号清单使用`*`
+* 数字清单使用`#`
+* 可以混合使用，一个`*`或者`#`代表一级
+* 可以混合引用`>`使用
+
+<<wikitext-example src:"* To do today
+*# Eat
+*#> eating
+* To get someone else to do
+*# This
+*# That
+*## And the other
+">>
+
+!! 清单段落
+> 使用换行符的清单项目，会成为另外的清单，与当前的清单区分，如果要成为一个清单。
+> 使用HTML的 `<div> </div>`包含多行内容
+
+```
+# Step 1
+# Step 2
+# Step 3<div>
+
+前面是第一部分的几个段落。请注意，明显的本段落之前有两个换行。
+
+接着是第二部分的几个段落
+</div>
+# Step 4
+# Step 5
+# Step 6
+```
+---
+
+# Step 1
+# Step 2
+# Step 3<div>
+
+前面是第一部分的几个段落。请注意，明显的本段落之前有两个换行。
+
+接着是第二部分的几个段落
+</div>
+# Step 4
+# Step 5
+# Step 6
+---
+
+!! CSS类别
+> 可以指定CSS的样式
+<<wikitext-example src:"* List One
+*.MyClass List Two
+* List Three
+">>

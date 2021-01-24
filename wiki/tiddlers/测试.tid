@@ -1,0 +1,33 @@
+caption: copy-to-clipboard 巨集（範例）
+created: 20191107045626016
+modified: 20200715065444697
+tags: macro
+title: 测试
+type: text/vnd.tiddlywiki
+
+> [[$:/editions/tw5.com/wikitext-macros]]
+> $:/core/macros/copy-to-clipboarda
+http://127.0.0.1:8080/#%24%3A%2Fcore%2Fmacros%2Fcopy-to-clipboard
+
+<$button set="TiddlerA!!caption" setTo={{TiddlerB!!caption}} >
+
+Press me!
+
+</$button>
+
+
+<<wikitext-example-without-html """<$checkbox tag="done"> Is it done?</$checkbox>""">>
+
+<$macrocall $name=".example" n="1" eg="""<<copy-to-clipboard "Mary had a little lamb">>"""/>
+
+
+<<wikitext-example-without-html 
+"""
+python
+import haah
+print（“”）
+""">>
+
+<$macrocall $name=".example" n="1" eg="""<<copy-to-clipboard "Mary had a little lamb">>"""/>
+
+<<copy-to-clipboard "Mary had a little lamb">>

@@ -1,0 +1,50 @@
+created: 20190627030513479
+modified: 20210123021200032
+tags: pyqt
+title: signal-slot 的连接方式
+type: text/vnd.tiddlywiki
+
+!! signal-slot 的连接方式
+!!! 1. 自定义信号
+
+* 定义信号
+*> `frame_read = QtCore.pyqtSignal(str)`
+*> 可以带参数，参数与触发的函数参数要一致
+
+* 定义连接的函数
+*> `frame_read.connect(function(str))`
+
+* 触发
+*> `self.frame_read.emmit(str)`
+
+!!! 2. 函数触发
+```python
+
+# @PyQt5.QtCore.pyqtSlot(参数)
+# def on_发送者对象名称_发射信号名称(self, 参数):
+#     pass
+
+# 定义一个 pushButton
+@pyqtslot()
+def on_pushButton_clicked():
+    pass
+```
+!!! 3.
+
+```python
+QtCore.QObject.connect(a, QtCore.SIGNAL('QtSig()'), pyFunction)
+QtCore.QObject.connect(a, QtCore.SIGNAL('QtSig()'), pyClass.pyMethod)
+QtCore.QObject.connect(a, QtCore.SIGNAL('QtSig()'), b, QtCore.SLOT('QtSlot()'))
+QtCore.QObject.connect(a, QtCore.SIGNAL('PySig()'), b, QtCore.SLOT('QtSlot()'))
+QtCore.QObject.connect(a, QtCore.SIGNAL('PySig'), pyFunction)
+```
+
+!! signal-slot 的连接与中断
+* `connect`
+* `disconnect`
+*> 取消连接信号与槽
+
+* `blockSignal(True)`
+*>临时（取消）阻止指定控件所有的信号与槽的连接
+*> `signalsBlocked()`
+*> 信号是否被阻止

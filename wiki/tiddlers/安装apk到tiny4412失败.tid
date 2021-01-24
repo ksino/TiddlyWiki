@@ -1,0 +1,9 @@
+created: 20191125075922094
+modified: 20191125095550222
+tags: android
+title: 安装apk到tiny4412失败
+type: text/vnd.tiddlywiki
+
+* `INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES`
+*> 主要是签名冲突造成的
+*> 解决的方法只有卸载原有版本再进行安装

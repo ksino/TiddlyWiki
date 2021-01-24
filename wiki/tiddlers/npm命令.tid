@@ -1,0 +1,19 @@
+created: 20191126002310583
+modified: 20191126003514474
+tags: node
+title: npm命令
+type: text/vnd.tiddlywiki
+
+* 查看全局安装的包
+*> `npm -g list --depth 0`
+
+* 查看源，可以看到设置过的所有的源
+*> `npm config get registry`
+
+* 设置淘宝源
+*> `npm config set registry https://registry.npm.taobao.org`
+
+* 安装cnpm同时设置淘宝源,不会改变npm的源
+*> `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+*> 使用这个命令安装包
+*> `cnpm install package_name`

@@ -1,0 +1,30 @@
+created: 20190627031715747
+modified: 20200409011249757
+tags: Python
+title: python 自定义函数
+type: text/vnd.tiddlywiki
+
+!! python3 的打印函数
+```python
+# 只适用 python3
+def log(*args, **kwargs):
+    print(*args, **kwargs)
+```
+
+!! python2 的打印函数
+```python
+# 有 bug
+def log(*args, **kwargs):
+    print time_format()
+    for i in args:
+        print i,
+    for k in kwargs:
+        print k, kwargs[k]
+    print '\n',
+```
+
+!! 时间格式
+```python
+def time_format():
+    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+```

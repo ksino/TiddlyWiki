@@ -1,0 +1,21 @@
+created: 20200108073322244
+modified: 20210123015201519
+tags: soft
+title: 文件校验md5 sha
+type: text/vnd.tiddlywiki
+
+cmder自带md5sum sha1sum sha256sum 
+
+```
+D:\Temp
+$ md5sum a.exe
+8fa109fc290f4b303e453a2a1854a10b *a.exe
+
+D:\Temp
+$ sha1sum a.exe
+3134d18dee278eb9e5745ad4040881df48ff5821 *a.exe
+
+D:\Temp
+$ sha256sum a.exe
+8cec1f3765e66cb1b24d0f588b1ec23bc8320ff6ef52c88b5e75bc5e306dd33d *a.exe
+```

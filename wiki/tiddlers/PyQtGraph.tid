@@ -1,0 +1,15 @@
+created: 20190703094402030
+modified: 20201125030347021
+tags: pyqt
+title: PyQtGraph
+type: text/vnd.tiddlywiki
+
+* 查看示例
+
+```python
+# cmd 下输入
+python -m pyqtgraph.examples
+# python 的交互界面
+import pyqtgraph.examples
+pyqtgraph.examples.run()
+```

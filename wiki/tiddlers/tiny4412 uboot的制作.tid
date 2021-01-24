@@ -1,0 +1,13 @@
+created: 20191108160457210
+modified: 20210123015800655
+tags: work
+title: tiny4412 uboot的制作
+type: text/vnd.tiddlywiki
+
+[[友善之臂|http://www.arm9.net/tiny4412.asp]]
+
+[[http://www.360doc.com/content/15/1111/08/6828497_512262753.shtml]]
+
+!! [[安装工具链|https://blog.csdn.net/qq_40793742/article/details/80200128]]
+* [[No such file or directory|https://blog.csdn.net/mr__g/article/details/54089912]] 
+*> `sudo apt-get install lsb-core`

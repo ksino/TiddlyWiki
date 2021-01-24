@@ -1,0 +1,10 @@
+created: 20200410101554628
+modified: 20210123012810983
+tags: work
+title: 周工的3d打印步骤
+type: text/vnd.tiddlywiki
+
+* `control` --> `Temperature` --> `Bed` 
+*> 设置成`48`
+
+* `Print from SD` --> 找到对应的文件或者文件夹，等待加热完毕即可打印

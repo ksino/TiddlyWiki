@@ -1,0 +1,15 @@
+created: 20191114105541237
+modified: 20191114110517495
+tags: svn
+title: torotisesvn忘记密码
+type: text/vnd.tiddlywiki
+
+# 首先,先找到你保存路径，默认是路径
+#* `C:\Users\kim\AppData\Roaming\Subversion\auth\svn.simple`
+#* 注意用户名
+
+ # [[点击连接下载软件到上述目录| http://www.leapbeyond.com/ric/TSvnPD/]]
+#* 直接运行`TSvnPwd.exe`，查看密码
+#* 第一步可以不用做
+
+    

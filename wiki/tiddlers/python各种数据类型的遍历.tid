@@ -1,0 +1,15 @@
+created: 20190628055438265
+modified: 20200409011249745
+tags: Python
+title: python各种数据类型的遍历
+type: text/vnd.tiddlywiki
+
+!! 字典
+```python
+dict = {
+    'a': 1,
+    'b': 2,
+}
+for key, value in dict.items():
+    print(key, value)
+```

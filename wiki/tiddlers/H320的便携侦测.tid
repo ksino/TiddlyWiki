@@ -1,0 +1,26 @@
+created: 20201110083244613
+modified: 20210123013528916
+tags: work
+title: H320的便携侦测
+type: text/vnd.tiddlywiki
+
+!! 调试页面
+* 灵敏度的焦点还没有取消
+*> <<red "已经添加此按钮">>
+* 信道图形的高度是否需要重新设置
+* 要不要恢复默认参数
+* 询问叶工是否需要保留时间日期。版本号是否需要精简。
+* 范工需要灵敏度默认为中档
+*> <<red "已添加">>
+
+!! 修改的文件
+* no_ui_wb_scanner.hpp
+* no_ui_wb_scanner.cpp
+* hmi_lcd.hpp
+* hmi_lcd.cpp
+* wideband_continual_signal_detector.hpp
+* wideband_continual_signal_detector.cpp
+* dds_h2xx_io.hpp
+
+[ ] 添加新的版本管理
+[x] 四个按键的代码

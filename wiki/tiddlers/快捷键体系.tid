@@ -1,0 +1,46 @@
+created: 20200415025254409
+modified: 20210123014113848
+tags: soft
+title: 快捷键体系
+type: text/vnd.tiddlywiki
+
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> <kbd>Alt</kbd> <kbd>Win</kbd>
+
+! AutoHotKey
+* 向上
+*> <kbd>Ctrl</kbd> + <kbd>P</kbd>
+* 向下
+*> <kbd>Ctrl</kbd> + <kbd>N</kbd>
+* 向左
+*> <kbd>Ctrl</kbd> + <kbd>B</kbd>
+* 向右
+*> <kbd>Ctrl</kbd> + <kbd>F</kbd>
+* 行首
+*> <kbd>Ctrl</kbd> + <kbd>A</kbd>
+* Backspace
+*> <kbd>Ctrl</kbd> + <kbd>H</kbd>
+* Delete
+*> <kbd>Ctrl</kbd> + <kbd>D</kbd>
+* 行尾
+*> <kbd>Ctrl</kbd> + <kbd>E</kbd>
+* 删除到行首
+*> <kbd>Ctrl</kbd> + <kbd>U</kbd>
+* 删除到行尾
+*> <kbd>Ctrl</kbd> + <kbd>K</kbd>
+
+! IDE
+
+* 复制当前行
+*> <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>
+* 删除当前行
+*> <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>
+* 向下移动当前行
+*> <kbd>Alt</kbd> + <kbd>J</kbd>
+* 向上移动当前行
+*> <kbd>Alt</kbd> + <kbd>K</kbd>
+* 后退
+*> <kbd>Alt</kbd> + <kbd>,</kbd>
+* 前进
+*> <kbd>Alt</kbd> + <kbd>.</kbd>
+* 定义
+*> <kbd>F2</kbd>

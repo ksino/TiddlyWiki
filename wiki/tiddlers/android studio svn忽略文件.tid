@@ -1,0 +1,11 @@
+created: 20191114104913135
+modified: 20191114105135664
+tags: android svn
+title: android studio svn忽略文件
+type: text/vnd.tiddlywiki
+
+# `.idea`文件夹
+# `.gradle`文件夹
+# 所有的`build`文件夹
+# 所有的`.iml`文件
+# `local.properties`文件

@@ -1,0 +1,23 @@
+created: 20191216010632959
+modified: 20200514075810966
+tags: qt
+title: qt creator代码格式化
+type: text/vnd.tiddlywiki
+
+
+! [[ Artistic Style|http://astyle.sourceforge.net/astyle.html]]
+> [[参考|https://blog.csdn.net/qing666888/article/details/90477338]]
+
+!!  设置
+* help -> about plugins -> beautifier(勾选)
+* Tools -> Options -> Beautifier -> Artistic Style
+** Artistic Style command
+**> `D:\Program\AStyle\bin\AStyle.exe`
+** （勾选）Use customized style -> add
+**> Name
+**> windwos
+**> Value:
+**> `--style=allman --pad-oper --indent=tab`
+
+!!  使用
+* Tools -> Beautifier -> Artistic Style -> Format Currnet File

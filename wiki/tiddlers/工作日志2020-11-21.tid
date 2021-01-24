@@ -1,0 +1,12 @@
+created: 20201121022630453
+modified: 20210123013537155
+tags: work
+title: 工作日志2020-11-21
+type: text/vnd.tiddlywiki
+
+* M200 H320 H320_gun的代码统一问题
+* py的图元选中，改变大小问题
+* QT绘制单位就是1/16度
+
+[ ] 建立本地的SVN库
+[ ] 如何条件编译

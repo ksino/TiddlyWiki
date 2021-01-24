@@ -1,0 +1,60 @@
+created: 20191106015142526
+modified: 20191112020004973
+tags: windows
+title: win7
+type: text/vnd.tiddlywiki
+
+! win7小技巧
+
+!!! 开始菜单上的项目右键没有反应
+* 开始菜单右键单击―属性
+* 开始菜单―自定义
+* 在“启用上下文菜单和拖放”前面打勾。
+
+!!! 资源管理器指向我的电脑
+* 右键任务栏的资源管理器
+* 弹出菜单，右键“windows资源管理器”－属性
+* 快捷方式－目标输入如下
+   `%windir%\explorer.exe ,`
+
+!!! 统一调整文件夹排列方式
+* 弹出文件夹选项，点击查看。点击应用到文件夹
+
+!!! 运行记住上次的命令 
+* 开始-右键属性
+* 开始菜单-;隐私;
+* 存储并显示最近在开始菜单里打开的程序”，这个选项打勾
+
+!!! 修改命令行窗口的默认路径
+* 打开开始菜单,找到附件中的命令提示符
+* 右键命令提示符,选择属性.选择快捷方式选项卡.
+* 在起始位置中设置需要修改成的目录,如我这里设置为D盘.就输入 
+* `D:%HOMEDRIVE%%HOMEPATH%`
+默认设置
+
+!!! 删除文件不用确认直接进入回收站
+* 右击桌面上的回收站，选择“属性”，
+* 取消“显示删除确认对话框”。
+
+
+!!!批量修改扩展名
+* `ren *.* *.txt`
+* ren重命名
+
+!!!修改 PATH 环境变量值。
+* 新增路径 T:\myScripts
+*> `wmic ENVIRONMENT where "name='PATH' and username='<system>'" set VariableValue="%PATH%;T:\myScripts" `
+*>[[参考|http://blog.csdn.net/qidi_huang/article/details/52634293]]
+
+!!!迅雷影音在线字幕路径
+* `C:\Users\Public\Thunder Network\XMP5\ProgramData\Subtitle`
+
+!!! Excel 数字形式储存文本
+* 选择列
+* 数据
+* 分列
+* 下一步
+* 下一步
+* 文本
+<<toc "win7" "sort[title]">>
+

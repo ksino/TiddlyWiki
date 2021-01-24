@@ -1,0 +1,18 @@
+created: 20191116234858156
+modified: 20210123021105685
+tags: C
+title: win7 c 环境 搭建
+type: text/vnd.tiddlywiki
+
+!! MinGW
+
+> `MinGW`(Minimalist GNU For Windows)是个精简的Windows平台C/C++、ADA及Fortran编译器
+
+* [[download|http://www.mingw.org/]]
+* 会下载一个名为mingw-get-setup.exe的安装文件
+* 安装完成后，下载c的相应组件
+** Mark install
+** `Installion` --> `Apply`
+
+* [[直接包含组件的安装包|http://soft.onlinedown.net/soft/577868.htm]]
+*> 比较简单

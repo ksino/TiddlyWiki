@@ -1,0 +1,31 @@
+created: 20191223013745708
+modified: 20200115084834857
+tags: qt
+title: 下位机的调试
+type: text/vnd.tiddlywiki
+
+* 安装JLink_Windows_V650b.exe
+* 安装Ozone_Windows_V310_x64.exe
+
+* qt creator build 项目并找到路径
+*> D:\Work\build-MotherBoard-Desktop_Qt_5_12_4_MinGW_64_bit-Default\firmware\application\application.elf
+* 打开ozone
+[img[ozone01]]
+
+[img[ozone02]]
+
+* 选择elf文件
+[img[ozone03]]
+
+!! 查看变量的值
+
+
+* qt代码里面，设置如下语句
+*> `SEGGER_RTT_printf(0, "说明文字 = %d\r\n", 变量名);`
+
+* 打开如下路径，配置如图
+*>`C:\Program Files (x86)\SEGGER\JLink\JLinkRTTViewer.exe`
+[img[j-link-rtt-1]]
+
+* 成功如下图
+[img[j-link-rtt-2]]

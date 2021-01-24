@@ -1,0 +1,10 @@
+created: 20191115043443256
+modified: 20200409011249735
+tags: Python
+title: requirements.txt的创建及使用
+type: text/vnd.tiddlywiki
+
+# 提取依赖包
+#> `pip freeze >requirements.txt`
+# 安装依赖包
+#> `pip install -r requirements.txt`

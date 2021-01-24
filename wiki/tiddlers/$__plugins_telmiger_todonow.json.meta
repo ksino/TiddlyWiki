@@ -1,0 +1,15 @@
+author: Thomas Elmiger
+core-version: >=5.1.14
+created: 20160918213151952
+creator: Thomas Elmiger
+dependents: Listreveal
+description: ToDoNow – a simple, elegant todo list
+list: readme try-out usage configuration user-filter support
+modified: 20200408094708472
+modifier: Thomas Elmiger
+name: ToDoNow
+plugin-type: plugin
+source: https://tid.li/tw5/plugins.html
+title: $:/plugins/telmiger/todonow
+type: application/json
+version: 1.2.15

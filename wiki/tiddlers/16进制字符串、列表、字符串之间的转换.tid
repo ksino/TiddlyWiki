@@ -1,0 +1,52 @@
+created: 20200911004518092
+modified: 20200911012151489
+tags: Python
+title: 16进制字符串、列表、字符串之间的转换
+type: text/vnd.tiddlywiki
+
+* 整形列表转str
+*> [0x53, 0x21, 0x6A] -> '\x53\x21\x6a'
+
+*> 方法：list -> bytearray -> str
+
+<<copy-code """def list_to_str(array):
+    print(array)
+    text = str(bytearray(array))
+    print(array, text)
+    return text""" python>>
+
+* str转整形列表
+*> 如：'\x53\x21\6a' -> [0x53, 0x21, 0x6A]
+*> 方法：逐个字符转成十进制
+
+<<copy-code """def str_to_list(s):
+    l = [ord(c) for c in s]
+    print(l)
+    return l
+""" python>>
+
+
+* 整形列表转换为hex string
+*> 如： [0x53, 0x21, 0x6A] -> '53216A'
+*> 方法：list -> bytearray -> str -> hexstring
+
+    import binascii
+    x = [0x53, 0x21, 0x6A]
+    y = str(bytearray(x))
+    z = binascii.b2a_hex(y)
+
+* hex string转换为整形列表
+*> 如： '53216A' -> [0x53, 0x21, 0x6A]
+*> 方法：hexstring -> bytearray -> list
+
+    x = '53216A'
+    y = bytearray.fromhex(x)
+    z = list(y)
+
+* hex string转换为str
+*> 如： '53216A' -> '\x53\x21\x6A'
+*> 方法：hexstring -> bytearray -> str
+
+    x = '53216A'
+    y = bytearray.fromhex(x)
+    z = str(y)

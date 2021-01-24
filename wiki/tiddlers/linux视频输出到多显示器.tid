@@ -1,0 +1,14 @@
+created: 20191104223121538
+modified: 20191104223735514
+tags: linux
+title: linux视频输出到多显示器
+type: text/vnd.tiddlywiki
+
+!! [[linux 视频输出xrandr设置命令|https://www.jianshu.com/p/4c37e52632da]]
+
+```bash
+xrandr
+# 查看当前的设备
+xrandr --output VGA-0(设备) --same-as DVI-D-0(设备) --auto
+# 打开外接显示器，双屏幕显示相同的内容--克隆
+```

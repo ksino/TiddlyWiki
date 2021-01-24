@@ -1,0 +1,13 @@
+created: 20201210022427648
+modified: 20210123015423465
+tags: browser
+title: Firefox 设置成不显示图片
+type: text/vnd.tiddlywiki
+
+* 地址栏输入 
+ <<copy-code """about:config?filter=permissions.default.image""">>
+
+
+*  `permissions.default.image`的值设置成2为不显示，默认为0。
+
+<<copy-code """permissions.default.image""">>

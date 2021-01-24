@@ -1,0 +1,14 @@
+created: 20201124073905796
+modified: 20210123015318867
+tags: program
+title: c++条件编译
+type: text/vnd.tiddlywiki
+
+```
+1.格式一
+        #ifdef <标识符>
+            程序段1
+        #else
+            程序段2
+        #endif
+```

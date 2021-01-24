@@ -1,0 +1,51 @@
+created: 20191024084609094
+creator: Ksino Huang
+modified: 20210123013925096
+modifier: Ksino Huang
+tags: wiki
+title: Bookmark
+type: text/vnd.tiddlywiki
+
+\define toc-heading(caption,body)
+<$reveal type="nomatch" state=<<qualify "$:/state/toc/$caption$">> text="show">
+<$button set=<<qualify "$:/state/toc/$caption$">> setTo="show" class="btn-invisible">{{$:/core/images/right-arrow}} $caption$
+</$button>
+</$reveal>
+<$reveal type="match" state=<<qualify "$:/state/toc/$caption$">> text="show">
+<$button set=<<qualify "$:/state/toc/$caption$">> setTo="hide" class="btn-invisible">{{$:/core/images/down-arrow}} $caption$
+</$button>
+</$reveal>
+<$reveal type="match" state=<<qualify "$:/state/toc/$caption$">> text="show" retain="yes" animate="yes">
+
+$body$
+
+</$reveal>
+\end
+
+Welcome to ~TidMarks, a simple way to organize your web bookmarks in ~TiddlyWiki.
+
+<div class="tw-table-of-contents">
+
+# <<toc-heading "Download ~TidMarks" "
+# {{ $:/_Download }}
+">>
+# <<toc-heading "Create bookmarks" "
+# {{ $:/_CreateBookmarks }}
+">>
+# <<toc-heading "Navigate and retrieve bookmarks" "
+# {{ $:/_NavigateRetrieve }}
+">>
+# <<toc-heading "Upgrade" "
+# {{ $:/_Upgrade }}
+">>
+# <<toc-heading "Why no browser extension?" "
+# {{ $:/_Extension }}
+">>
+# <<toc-heading "Help us out" "
+# {{ $:/_Help }}
+">>
+
+</div>
+
+[[All my tags]]<br>
+[[All my indexes]]

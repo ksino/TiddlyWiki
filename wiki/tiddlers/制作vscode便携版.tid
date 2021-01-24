@@ -1,0 +1,14 @@
+created: 20191208003639141
+modified: 20200414021712678
+tags: editor vscode
+title: 制作vscode便携版
+type: text/vnd.tiddlywiki
+
+* setting.json
+*> `C:\Users\ksino\AppData\Roaming\Code\User`
+
+* [[便携版|https://www.jianshu.com/p/ef41b21eb45d]]
+*> code.exe下创建data目录
+*>` %APPDATA%\Code`复制到data目录下重命名为`user-data`
+*> `%USERPROFILE%\.vscode\extensions`复制到data目录
+*> 创建tmp目录存储使临时文件

@@ -1,0 +1,35 @@
+created: 20191102003943043
+modified: 20210123015917331
+tags: soft
+title: u盘
+type: text/vnd.tiddlywiki
+
+> U盘做成启动盘后，U盘的空间会有些变化，很大的U盘存储空间，做完启动盘后往往都会缩小。
+
+!! 量产u盘
+> 量产的时候，update不会显示u盘
+# 检测U盘型号
+#> 下载 `chipgenius`
+
+# https://www.jb51.net/softs/566623.html
+
+!! [[U盘制作成启动盘后容量变小怎么恢复|https://blog.csdn.net/saddyyun/article/details/92806155]]
+* `diskpart` --> `list disk` --> `select disk u盘的编号` --> `clean`
+* 磁盘管理 --> 右键新建卷
+
+```
+$ diskpart
+
+Microsoft DiskPart 版本 6.1.7601
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: WIN7-1704141504
+
+DISKPART> list disk
+
+  磁盘 ###  状态           大小     可用     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  磁盘 0    联机              465 GB  1024 KB
+
+DISKPART> select disk 2
+DISKPART> clean
+```

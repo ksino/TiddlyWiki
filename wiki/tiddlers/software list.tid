@@ -1,0 +1,31 @@
+created: 20200325012943059
+modified: 20201009013512554
+tags: Todo task done
+title: software list
+type: text/vnd.tiddlywiki
+
+! 软件清单
+
+# 深蓝词库转换
+#> 输入法导入词库
+#> `D:\Software\System\Input\Release_V2.6_Windows\深蓝词库转换.exe`
+
+# [[Tickeys|http://www.yingdev.com/projects/tickeys]]
+#>  打字时模拟机械键盘音效
+#> 快捷键`QAZ123`
+#> `D:\Program\Tickeys1.1.1\Release\TicKeys.exe`
+
+# [[SpaceSniffer|www.uderzo.it/main_products/space_sniffer/download_alt.html]]
+#> 是一个运行于 Windows 下的磁盘空间占用查看工具
+#> `D:\Program\spacesniffer_1_3_0_2\SpaceSniffer.exe`
+
+# 
+#>
+#>``
+
+!! 模板
+
+# [[|]]
+#>
+#>``
+

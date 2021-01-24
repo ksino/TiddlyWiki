@@ -1,0 +1,13 @@
+created: 20191021091606907
+modified: 20200720013713007
+tags: menu
+title: Work
+type: text/vnd.tiddlywiki
+
+<ul>
+  <$list filter="[tag[Work]sort[title]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>

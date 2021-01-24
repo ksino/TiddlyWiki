@@ -1,0 +1,42 @@
+created: 20200408085748555
+<<<<<<< .minemodified: 20200408131111407
+tags: tiddlywiki
+=======modified: 20200409011212050
+tags: TiddlyWiki
+>>>>>>> .theirstitle: 插件
+type: text/vnd.tiddlywiki
+
+!! 安装插件
+> 其实插件就是一个JSON文件
+
+* 官方插件
+*> 打开[[控制台|$:/ControlPanel]]，点击''插件''标签，点击获取更多标签
+
+* 社区插件
+*> 
+
+!! 卸载插件
+
+# 建立 ~TiddlyWiki HTML备份（''真的可以以防万一''）
+# 打开[[控制台|$:/ControlPanel]]，点击''插件''标签
+# 点击您想要删除的插件，如同打开一个独立的条目
+# 点击该条目工具列的 <<.icon $:/core/images/down-arrow>> ''更多''按钮和 <<.icon $:/core/images/delete-button>> ''删除''条目
+# 储存您的 ~TiddlyWiki (<<.icon $:/core/images/save-button>>)
+
+!! 一些插件
+> http://erwanm.github.io/tw-community-search/#CommunityPlugins
+* [[TiddlyMap |http://tiddlymap.org]]
+*> 一个强大的令人发指的流程图、思维导图等绘制插件
+
+* [[ tw5-checklist|https://link.zhihu.com/?target=http%3A//grosinger.net/tw5-checklist/]]
+*> 任务清单的插件
+*> 直接添加Markdown语法`[ ]`，就可以在界面直接添加list
+
+!!! demo
+[ ] one
+
+* [[ToDoNow|https://tid.li/tw5/plugins.html#Get%20More%20Plugins:%5B%5BGet%20More%20Plugins%5D%5D%20ToDoNow%20%5B%5BToDoNow%20Installation%5D%5D%20%24%3A%2Fplugins%2Ftelmiger%2FPluginSize%2Flists]]
+*> 一个强大的简直有点过头的嵌入 Todolist 插件
+
+
+

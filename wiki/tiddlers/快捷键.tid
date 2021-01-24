@@ -1,0 +1,19 @@
+created: 20191031083300940
+modified: 20200409011212058
+tags: TiddlyWiki
+title: 快捷键
+type: text/vnd.tiddlywiki
+
+> [[快捷键|http://127.0.0.1:8080/#%24%3A%2FControlPanel]]
+!! 编辑
+# ''确认更改''
+#* <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
+# ''放弃更改''
+#*  <kbd>Esc</kbd>
+
+# ''建立一个新条目''
+#* <kbd>Alt</kbd>+<kbd>N</kbd>
+# '' 建立一个新日志''
+#* <kbd>Alt</kbd>+<kbd>J</kbd>
+# ''建立一个新图像''
+#* <kbd>Alt</kbd>+<kbd>I</kbd>

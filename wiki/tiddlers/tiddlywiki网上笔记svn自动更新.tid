@@ -1,0 +1,107 @@
+created: 20191026090134838
+modified: 20191026093049164
+tags: svn
+title: tiddlywiki网上笔记svn自动更新
+type: text/vnd.tiddlywiki
+
+!! 部署
+> 在家或者公司，修改笔记，提交svn后，服务器自动更新svn，直接访问服务器的笔记就可以
+* SVN的版本库：[[SVNBucket|https://svnbucket.com/#/detail/710547/source]]
+* 修改笔记的电脑：公司，家里
+* wiki笔记的服务器
+
+!! svn的钩子
+> 提交之后，svn版本库的网站发送一个请求到服务器。服务器判断url是不是`/update`
+* `http://123.207.18.80:3344/update`
+
+!! nginx的配置
+> `/etc/nginx/conf.d/wiki.conf`
+> 端口80 --> 9000：访问笔记端口
+> 端口3344 --> 9001: 接受svn更新请求的端口
+
+```
+server {
+  listen 80;
+  server_name 123.207.18.80;
+  location / {
+    proxy_pass http://127.0.0.1:9000;
+  }
+}
+
+server{
+  listen 3344;
+  server_name 123.207.18.80;
+  location / {
+    proxy_pass http://127.0.0.1:9001;
+  }
+}
+
+```
+
+!! 访问wiki的设置
+> svn path：`/home/ubuntu/study/wiki`
+> 配置文件路径：`/home/ubuntu/study/wikicc/wiki.sh`
+> 启动命令：`pm2 start wiki.sh`
+
+* wiki.sh
+
+```
+tiddlywiki /home/ubuntu/study/wiki --listen port=9000 writers=root
+# writers=root 如果不设置，访问wiki的人可以更改，造成svn的冲突
+# 详细查看 listen 命令
+```
+
+!! 接收请求的配置
+> 配置文件路径：`/home/ubuntu/study/wikicc/commit.js`
+> 接收到请求，判断路径，执行脚本
+
+
+```javascript
+// commit.js 
+var http = require('http')
+var server = http.createServer()
+var exec = require('child_process').execFile
+
+server.on('request', function (request,response) {
+    console.log('接受到request：<' + request.url + '>')
+    var url = request.url
+    if(url ==='/update') {
+        exec('./update.sh', function(err, stdout, stderr) {
+            if (err) {
+                console.log('err: ' + err)
+            }
+            if (stderr) {
+                console.log('stderr: ' + stderr)
+            }
+            if (stdout) {
+                console.log('已执行: ' + stdout)
+            }
+        })
+
+        response.writeHead(200,{'Content-Type':'text/html'})
+        response.write("success")
+        response.end()
+    }
+})
+
+server.listen(9001, function () {
+    console.log('服务器已启动')
+})
+
+```
+
+!! 更新脚本
+> 配置文件路径：`/home/ubuntu/study/wikicc/update.js`
+
+
+```bash
+# update.sh 
+#!/bin/sh
+svn update /home/ubuntu/study/wiki
+sleep 5
+pm2 restart /home/ubuntu/study/wikicc/wiki.sh
+
+```
+
+
+

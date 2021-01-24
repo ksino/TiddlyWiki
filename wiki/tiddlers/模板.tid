@@ -1,0 +1,16 @@
+created: 20191231072625303
+creator: Ksino Huang
+modified: 20210123014938382
+modifier: Ksino Huang
+tags: wiki
+title: 模板
+tmap.id: 56ec6cff-87b3-41a8-b31d-9ed2a1b08b29
+type: text/vnd.tiddlywiki
+
+[[自定义宏]]
+
+```
+<<copy-code "
+">>
+```
+

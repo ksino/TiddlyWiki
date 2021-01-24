@@ -1,0 +1,25 @@
+created: 20200813090539457
+modified: 20201125030012188
+tags: pyqt
+title: pyside2的代码报错
+type: text/vnd.tiddlywiki
+
+
+* 运行pyside2的代码报错
+
+```
+qt.qpa.plugin: Could not load the Qt platform plugin "windows" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: direct2d, minimal, offscreen, windows.
+```
+https://www.cnblogs.com/hankleo/p/13432119.html
+
+* 解决办法 
+*> <<green "C:\Anaconda2\envs\qt\Lib\site-packages\PySide2\plugins\platforms">>
+*> 替换
+*><<red " C:\Anaconda2\envs\qt\Library\plugins\platforms">>
+
+* <<red "复制之后可以正常运行，但是界面与qt designer预览的不一致">>
+* 彻底的解决办法是，安装库的时候，已经安装了pyside2就不要再安装pyqt
+* 参看[[commandcenter python2迁移到python3]]

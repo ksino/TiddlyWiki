@@ -1,0 +1,28 @@
+created: 20190615110803015
+modified: 20201125030042782
+tags: pyqt
+title: pycharm集成pyqt
+type: text/vnd.tiddlywiki
+
+> External Tools其实就是将命令拼接起来运行
+
+* pycharm
+*> `File`->`settings`->`Tools`->`External Tools`->`点击 '+'` 
+
+* 使用QtDesigner编辑UI文件
+*> Name: QtDesigner
+*>Program: `D:\Program\PyQt4\designer.exe`
+*> Arguments: `$FilePath$ `
+*> Working directory: `$FileDir$`
+
+* PyUIC将UI文件转成PY文件
+*> Name: PyUIC
+*>Program: `C:\Anaconda2\python.exe`
+*> Arguments: `C:\Anaconda2\Lib\site-packages\PyQt4\uic\pyuic.py $FileName$ -o $FileNameWithoutExtension$.py`
+*> Working directory: `$FileDir$`
+
+* PyRCC将资源文件转成qrc文件
+*> Name: PyRCC
+*>Program: `C:\Anaconda2\Library\bin\pyrcc4.exe`
+*> Arguments: `$FileName$ -o $FileNameWithoutExtension$_rc.py`
+*> Working directory: `$FileDir$`

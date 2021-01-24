@@ -1,0 +1,17 @@
+created: 20200413043600098
+modified: 20200414021745505
+tags: vscode editor
+title: vscode更改terminal为cmder
+type: text/vnd.tiddlywiki
+
+* D:\Program\VSCode-win32-x64-1.43.2\data\user-data\User\settings.json
+*> [[参考|https://blog.csdn.net/leonhe27/article/details/81210000]]
+* 注释`"terminal.integrated.shell.windows"`
+* 将cmder的根目录替换
+
+<<copy-code """    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.env.windows": {
+        "CMDER_ROOT": "D:\\Program\\Cmder"
+    },
+    "terminal.integrated.shellArgs.windows": ["/k", "D:\\Program\\Cmder\\vendor\\init.bat"], """ json>>

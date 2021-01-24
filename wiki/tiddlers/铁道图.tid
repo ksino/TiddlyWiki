@@ -1,0 +1,19 @@
+created: 20200523013244787
+modified: 20210123021244493
+tags: 插件 wiki
+title: 铁道图
+type: text/vnd.tiddlywiki
+
+[[$:/plugins/tiddlywiki/railroad]]
+
+<$railroad text="""
+["+"]
+({ [[digit|GettingStarted]] } | "#" <'escape sequence'>)
+[{("@" name-char | :"--" )}]
+"""/>
+
+<$railroad text="""
+"data"
+size_reach
+(yes calc_pass_count (yes "true"| no calc_same_prev_5 ( yes "true" | no "false")) | no "false")
+"""/>

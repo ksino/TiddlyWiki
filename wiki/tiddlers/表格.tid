@@ -1,0 +1,104 @@
+created: 20200422051936850
+modified: 20200422053254475
+tags: Wiki语法
+title: 表格
+type: text/vnd.tiddlywiki
+
+! 基本表格
+
+* 使用''垂直线''，表示表格
+* 使用''感叹号''，表示表头
+
+```
+|!Cell1 |!Cell2 |
+|Cell3 |Cell3 |
+```
+
+|!Cell1 |!Cell2 |
+|Cell3 |Cell3 |
+
+! 单元格的对齐方式
+>对齐方式，是以插入前置或后置空格来控制的
+
+```
+|Left aligned content |
+| Right aligned content|
+| Centred content |
+|+++ a very wide column so we can see the alignment +++|
+```
+
+显示结果：
+
+|Left aligned content |
+| Right aligned content|
+| Centred content |
+|+++ a very wide column so we can see the alignment +++|
+
+! 单元格的垂直对齐方式
+>通过单元格的第一个字符插入 ' ^' 顶部对齐或 '，' 为底端对齐。
+
+```
+|^top left |^ top center |^ top right|
+|middle left | middle center | middle right|
+|,bottom left |, bottom center |, bottom right|
+```
+
+显示结果：
+
+| :: | ::::::::::::::::::::::::::: | ::::::::::::::::::::::::::: | ::::::::::::::::::::::::::: | :: |
+| ::<br>:: |^top left |^ top center |^ top right| ::<br>:: |
+| ::<br>:: |middle left | middle center | middle right| ::<br>:: |
+| ::<br>:: |,bottom left |, bottom center |, bottom right| ::<br>:: |
+| :: | ::::::::::::::::::::::::::: | ::::::::::::::::::::::::::: | ::::::::::::::::::::::::::: | :: |
+
+如果您需要于左对齐的单元格用 ' ^' 或 ',' 作为第一个字符的，可以使用 HTML 转义字符：
+
+| `^` | &amp;#94; |
+| `,` | &amp;#44; |
+
+! 单元格合并
+
+若要合并一个以上的表格单元格，使用的特殊单元格内容为 ' ~'。
+要与它右边的一个单元格合并，使用 '<'。
+要与它左边的一个单元格合并，使用' >'。
+
+```
+|Cell1 |Cell2 |Cell3 |Cell4 |
+|Cell5 |Cell6 |Cell7 |<|
+|Cell5 |~|Cell7 |Cell8 |
+|>|Cell9 |Cell10 |Cell11 |
+```
+
+显示结果：
+
+|Cell1 |Cell2 |Cell3 |Cell4 |
+|Cell5 |Cell6 |Cell7 |<|
+|Cell5 |~|Cell7 |Cell8 |
+|>|Cell9 |Cell10 |Cell11 |
+
+! 表格类别、 标题、 页眉和页脚
+
+表格 CSS 类别、标题、页眉和页脚，可以特殊的虚列指定之。以下范例：
+
+* 指定表格的 CSS 类别为 "myclass" 和 "anotherClass"
+* 给定该表格的标题 "This is a caption"
+* 增加单元格文字为 "Header" 的标题栏
+* 增加单元格文字为 "Footer" 的页脚列
+
+```
+|myclass anotherClass|k
+|This is a caption |c
+|Cell1 |Cell2 |
+|Cell3 |Cell3 |
+|Header|Header|h
+|Footer|Footer|f
+```
+
+显示结果：
+
+|myclass anotherClass|k
+|This is a caption |c
+|Cell1 |Cell2 |
+|Cell3 |Cell3 |
+|Header|Header|h
+|Footer|Footer|f

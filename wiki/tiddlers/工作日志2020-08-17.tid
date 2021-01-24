@@ -1,0 +1,53 @@
+created: 20200817011249724
+modified: 20200824012104374
+tags: Work
+title: 工作日志2020-08-17
+type: text/vnd.tiddlywiki
+
+!! 周一
+* pyqtgraph的view all 取消
+*> 没有头绪，view all 出现在ViewBoxMenu类中
+
+* 对比
+*> 第三种
+
+!! 周二
+
+*没有对比
+*> 与0.5的版本相比，可能慢一点，没有什么差别。
+
+* 第二次对比
+
+
+[ ] 可以准备测试？
+
+!! 周三
+
+
+* 出现10M报警为20M是因为计算的误差
+
+*> abs(end - begin_freq + 1 - bandwidth)  <= 容差
+
+* 10M 容查
+*> <<green "t = 0">>  <<red " [9, 9]">>
+*> <<green "t = 1">>  <<red " [8, 10]">>
+*> <<green "t = 2">>  <<red " [7, 11]">>
+*> <<green "t = 3">>  <<red " [6, 12]">>
+*> <<green "t = 4">>  <<red " [5, 13]">>
+*> <<green "t = 5">>  <<red " [4, 14]">>
+* 20M 容查
+*> <<green "t = 2 ">>  <<red "[17, 21]">>
+*> <<green "t = 3 ">>  <<red "[16, 22]">>
+*> <<green "t = 4 ">>  <<red "[15, 23]">>
+*> <<green "t = 5 ">>  <<red "[14, 24]">>
+*> <<green "t = 6 ">>  <<red "[13, 25]">>
+*> <<green "t = 7 ">>  <<red "[12, 26]">>
+*> <<green "t = 8 ">>  <<red "[11, 27]">>
+!! 周四
+[ ] todo
+
+!! 周五
+[ ] todo
+
+!! 周六
+[ ] todo

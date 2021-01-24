@@ -1,0 +1,34 @@
+created: 20191229223619151
+creator: Ksino Huang
+modified: 20200424060127486
+modifier: Ksino Huang
+tags: JavaScript
+title: 获取电影下载链接的js代码
+tmap.id: f7d4a60f-eeeb-47d3-a33f-8771f3e40060
+type: text/vnd.tiddlywiki
+
+* http://370kan.com:90/ju/list/---2018-9-g-p4
+
+<<copy-code "var all = document.querySelectorAll('.dwon_y a')
+var str = ''
+all.forEach(function(item) {
+  str += item.href + '\n'
+})
+console.log(str)
+" python>>
+
+
+* [[电影MP4|https://www.dymp4.net/]]
+
+<<copy-code """var all = document.querySelectorAll('.down_list ul li input.down_url')
+
+var str = ''
+all.forEach(function(item) {
+  str += item.value + '\n'
+})
+console.log(str)""" javascript>>
+
+<br>
+<<copy-code """http://down.phpzuida.com/2004/LL迷窟-16.mp4
+http://down.phpzuida.com/2004/LL迷窟-17.mp4
+http://down.phpzuida.com/2004/LL迷窟-18.mp4""">>

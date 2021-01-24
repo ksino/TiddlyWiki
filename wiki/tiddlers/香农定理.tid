@@ -1,0 +1,7 @@
+created: 20200410031536625
+modified: 20200410031740565
+tags: 电子
+title: 香农定理
+type: text/vnd.tiddlywiki
+
+Rmax=W * log ,,2,,^^(1+S/N)^^

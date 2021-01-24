@@ -1,0 +1,36 @@
+created: 20200814081004114
+modified: 20201125030150699
+tags: python
+title: commandcenter python2迁移到python3
+type: text/vnd.tiddlywiki
+
+! 安装依赖
+* pyside2（也就是pyqt）
+
+<<copy-code """
+pip install pyside2 -i https://pypi.tuna.tsinghua.edu.cn/simple""" >>
+
+*  matplotlib 
+*> 不要使用`conda`，它会安装pyqt5导致与pyside2有bug
+*> 参考[[pyside2的代码报错]]
+
+<<copy-code """
+pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple""" >>
+
+* serial
+<<copy-code """
+pip install pyserial""" >>
+
+* scipy
+<<copy-code """
+pip install scipy -i https://pypi.tuna.tsinghua.edu.cn/simple""" >>
+
+* pytz, pandas
+<<copy-code """
+pip install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple""" >>
+
+* 
+<<copy-code """
+""" >>
+
+! 模块路径

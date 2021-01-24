@@ -1,0 +1,42 @@
+created: 20191228041658477
+modified: 20200108021859496
+tags: linux
+title: tmux
+type: text/vnd.tiddlywiki
+
+> 后台运行命令
+
+* 安装
+*> `sudo apt-get install tmux`
+
+* 新建会话
+*> `tmux new -s session-name`
+
+* 断开当前会话
+*> `tmux detach`
+
+* 进入之前的会话
+*> `tmux a -t demo`
+
+* 关闭会话
+*> `tmux kill-session -t demo` # 关闭demo会话
+*> `tmux kill-server` # 关闭服务器，所有的会话都将关闭
+
+* 查看所有的会话
+*> `tmux ls`
+
+* 查看前缀
+*> `tmux show-options -g | grep prefix`
+
+* 修改前缀
+*> `vim ~/.tmux.conf`
+
+
+```
+set -g prefix C-a #
+unbind C-b # C-b即Ctrl+b键，unbind意味着解除绑定
+bind C-a send-prefix # 绑定Ctrl+a为新的指令前缀
+
+# 从tmux v1.6版起，支持设置第二个指令前缀
+set-option -g prefix2 ` # 设置一个不常用的`键作为指令前缀，按键更快些
+```

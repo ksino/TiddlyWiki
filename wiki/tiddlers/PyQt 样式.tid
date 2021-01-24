@@ -1,0 +1,38 @@
+created: 20190629021140316
+modified: 20201125030430467
+tags: pyqt
+title: PyQt 样式
+type: text/vnd.tiddlywiki
+
+* 新建一个以 `.qss` 为扩展名的文件
+
+* 读取
+```python
+with open('style.qss') as f:
+    qss = f.read()
+
+QLabel.setStyleSheet(qss)
+```
+
+* `.qss` 文件格式
+
+```css
+/*与CSS的语法相似*/
+/*QLabel 就是CSS里面的元素*/
+/*notice 就是 objectName*/
+/**/
+QLabel#notice {
+    font-size: 20px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+/*方括号里面就是属性和值*/
+/*通过setProperty() 设置*/
+QLabel#notice[notice_level="normal"] {
+    color: green;
+    border-color: green;
+}
+```
+

@@ -1,0 +1,42 @@
+created: 20191112013433258
+modified: 20191125021428363
+tags: win7 cmder
+title: 添加 cmder 到右键菜单
+type: text/vnd.tiddlywiki
+
+> [[设置参考|https://zhuanlan.zhihu.com/p/28400466]]
+
+!! 修改符号`λ` 为 `$`
+* 打开`D:\Program\Cmder\vendor\clink.lua`
+* 将 `local lambda = "λ"`
+* 修改为`local lambda = "$"`
+
+!! 查找历史命令
+> <kbd>Ctrl</kbd> + <kbd>R</kbd>
+!! 添加至右键菜单
+# 进入cmder的根目录，打开命令行注册右键菜单。
+# 查看帮助命令
+#> `cmder /?`
+# 注册
+#> `cmder /REGISTER ALL`
+# 卸载
+#> `cmder /UNREGISTER ALL`
+
+!! 命令简化
+# 编辑 `C:\Program Files (x86)\cmder\config\user-aliases.cmd`
+# example: `djsp=django-admin startproject $*`
+#> `$*`等同于此命令可外接参数
+#> [[参考|https://jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/]]
+
+!! 升级备份
+# cmder设置
+#> `C:\Program Files (x86)\cmder\vendor\conemu-maximus5\ConEmu.xml`
+# 备份config文件夹
+#> `C:\Program Files (x86)\cmder\config\`
+
+!! cmder的编码问题
+# 爬虫使用cmder打印的时候，时常会出现gbk 转utf-8的[[问题|https://www.crifan.com/unicodeencodeerror_gbk_codec_can_not_encode_character_in_position_illegal_multibyte_sequence/]]
+
+# `Settings > Startup > Environment`
+# 添加`chcp 65001`
+#> 通过 chcp命令改变代码页，UTF-8的代码页为65001

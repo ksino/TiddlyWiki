@@ -1,0 +1,9 @@
+created: 20200414022408697
+modified: 20200414022633291
+tags: vscode
+title: vscode更改标题
+type: text/vnd.tiddlywiki
+
+* `File` -> `preferences` -> `settings`
+*> 搜索`window:title`
+*> 修改为`${activeEditorLong}`

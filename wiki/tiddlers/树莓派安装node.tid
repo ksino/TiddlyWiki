@@ -1,0 +1,30 @@
+created: 20191210061147330
+modified: 20200408135654577
+tags: raspberry node
+title: 树莓派安装node
+type: text/vnd.tiddlywiki
+
+> [[参考|https://www.jianshu.com/p/726a5f34e541]]
+
+* 官网下载armv7的版本
+*> `wget https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-armv7l.tar.xz`
+
+* 解压
+*> `xz -d node-v10.0.0-linux-armv7l.tar.xz`
+*> `tar -xavf node-v10.0.0-linux-armv7l.tar`
+
+* 移动
+*> `sudo mv ./node-v10.0.0-linux-armv7l /usr/local/node`
+
+* 软连接
+*> `sudo ln -s /usr/local/node/bin/node /usr/bin/node`
+*> `sudo ln -s /usr/local/node/bin/npm /usr/bin/npm`
+
+* 验证
+```
+node --version
+>> v10.0.0
+npm --version
+>>
+5.6.0
+```

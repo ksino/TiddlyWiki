@@ -1,0 +1,39 @@
+created: 20191125022202507
+modified: 20191231070306096
+tags: editor
+title: sublime
+type: text/vnd.tiddlywiki
+
+!! 设置sublime text3的右键打开功能
+> `网上搜到的一大堆是错的`
+* 新建sublime_addright.reg文件 编辑后双击打开就OK
+*> 文件名称随便起
+
+<<copy-code """
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\*\shell\SublimeText3]
+@="Edit with Sublime"
+"Icon"="D:\\Program\\sublime3\\sublime_text.exe,0"
+
+[HKEY_CLASSES_ROOT\*\shell\SublimeText3\command]
+@="\"D:\\Program\\sublime3\\sublime_text.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
+@="Edit with Sublime"
+"Icon"="D:\\Program\\sublime3\\sublime_text.exe,0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3\command]
+@="\"D:\\Program\\sublime3\\sublime_text.exe\" \"%1\""
+"""
+>>
+* 删除
+
+
+<<copy-code """
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT\*\shell\SublimeText3]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
+"""
+>>
+

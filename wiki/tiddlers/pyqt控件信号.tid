@@ -1,0 +1,9 @@
+created: 20200715014005083
+modified: 20200715065523671
+tags: pyqt
+title: pyqt控件信号
+type: text/vnd.tiddlywiki
+
+<<copy-code """    # def on_comboBoxAMP24_activated(self, int):
+    def on_comboBoxAMP24_currentIndexChanged(self, int):""" python>>
+* pyqt的class，执行的顺序是先__init__()还是showEvent()??

@@ -1,0 +1,17 @@
+created: 20190516144225121
+creator: Ksino Huang
+modified: 20200408075900841
+modifier: Ksino Huang
+tags: Wiki语法
+title: 定义
+tmap.id: ee0f0c53-cb69-46e3-b64b-0ffc26c6c380
+type: text/vnd.tiddlywiki
+
+! 定义
+> 以此语法建立HTML的定义清单
+>> 定义的名称前加`;`
+>> 定义的解释前加`:`
+
+<<wikitext-example src:"; 程序
+: 计算机程序（Computer Program），港、台译做电脑程式。计算机程序是一组计算机能识别和执行的指令，运行于电子计算机上，满足人们某种需求的信息化工具。
+">>

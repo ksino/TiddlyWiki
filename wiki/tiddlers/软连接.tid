@@ -1,0 +1,13 @@
+created: 20210123043141931
+creator: ksino H
+modified: 20210123071506549
+modifier: ksino H
+tags: program undone
+title: 软连接
+type: text/vnd.tiddlywiki
+
+* 什么是软连接和硬连接？不是太明白
+https://www.cnblogs.com/Naylor/p/7597869.html
+
+! windows
+<<copy-code """mklink  /j  G:\Geth H:\tools""">>

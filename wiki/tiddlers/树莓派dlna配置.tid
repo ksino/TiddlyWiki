@@ -1,0 +1,33 @@
+created: 20200101054610828
+modified: 20200408135804170
+tags: raspberry linux
+title: 树莓派dlna配置
+type: text/vnd.tiddlywiki
+
+!! 配置
+* 配置访问路径
+*> `sudo vim /etc/minidlna.conf`
+
+
+```
+user=root
+media_dir=V,/media/pi/EasyU/
+```
+
+
+* minidlna挂载的硬盘中的不显示视频
+*> `sudo vim /etc/default/minidlna`
+```
+USER="root"
+DAEMON_OPTS=""
+```
+
+!! 更新资源
+> 新增文件，执行以下命令
+* 强行更改配置
+*> `sudo service minidlna force-reload`
+
+* 手动更新minidlna数据库并重启服务
+*> `sudo minidlnad -R`
+*> `sudo systemctl restart minidlna.service`
+[[参考|https://blog.csdn.net/winniezhang/article/details/88293406]]

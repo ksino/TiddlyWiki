@@ -1,0 +1,25 @@
+created: 20190518100251156
+creator: ksino.H
+modified: 20200409011212083
+modifier: Ksino Huang
+tags: TiddlyWiki
+title: 目录模板
+type: text/vnd.tiddlywiki
+
+```
+<ul>
+  <$list filter="[tag[menu]sort[time]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>
+```
+
+<ul>
+  <$list filter="[tag[menu]sort[time]]">
+    <li style="list-style-type: decimal;">
+      <$link to={{!!title}}><<toc-caption>></$link>
+    </li>
+  </$list>
+</ul>

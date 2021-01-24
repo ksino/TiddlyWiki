@@ -1,0 +1,27 @@
+created: 20190517073952802
+creator: ksino.H
+modified: 20191105173044220
+modifier: ksino.H
+tags: node 部署
+title: pm2
+type: text/vnd.tiddlywiki
+
+官网：http://pm2.keymetrics.io/
+
+!! 安装
+> `npm install -g pm2`
+
+!! 常用命令
+> [[参考|https://www.cnblogs.com/zhoujie/p/nodejs4.html]]
+
+* `pm2 start app.js`
+* `pm2 stop app.js`
+* `pm2 restart app.js`
+* `pm2 list`
+
+!! 自动启动
+# `pm2 startup`
+# 执行`提示`的命令
+# `pm2 save`
+# `pm2 unstartup`
+*> 取消自启

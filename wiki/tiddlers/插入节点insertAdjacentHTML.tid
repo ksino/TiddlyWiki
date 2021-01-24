@@ -1,0 +1,41 @@
+created: 20190605055346323
+modified: 20210123021349065
+tags: JavaScript
+title: 插入节点insertAdjacentHTML
+type: text/vnd.tiddlywiki
+
+! `element.insertAdjacentHTML(position, string)`
+> string: HTML 的字符串
+!! position
+* `beforebegin`
+*> 当前元素之前，插入一个同辈元素
+* `afterend`
+*> 当前元素之后，插入一个同辈元素
+* `beforeend`
+*> 当前元素之下，在最后一个子元素之后插入一个新的子元素
+* `afterbegin`
+*> 当前元素之下，在第一个子元素之前插入一个新的子元素
+
+
+```javascript
+// 插入节点
+var insertHTML = function(element, position, str) {
+    var p = {
+        // 在element之前，插入元素
+        before: 'beforebegin',
+         // 在element之后，插入元素
+        after: 'afterend',
+        // 在element的第一个子元素之前，插入元素
+        first: 'afterbegin',
+        // 在element的最后一个子元素之后，插入元素
+        last: 'beforeend',
+    }
+    position = p[position]
+    if (!position) {
+        position = 'beforebegin'
+    }
+    element.insertAdjacentHTML(position, str)
+}
+```
+
+

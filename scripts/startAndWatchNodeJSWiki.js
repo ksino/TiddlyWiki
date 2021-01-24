@@ -1,5 +1,7 @@
 const startNodeJSWiki = require('./startNodeJSWiki');
 const watchWiki = require('./watchWiki').watchWiki;
 
-startNodeJSWiki();
-watchWiki();
+module.exports = function build() {
+    startNodeJSWiki();
+    watchWiki();
+}

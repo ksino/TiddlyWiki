@@ -1,0 +1,17 @@
+created: 20191023015043187
+creator: Ksino Huang
+modified: 20210123072148348
+modifier: Ksino
+tags: wiki linux
+title: Ubuntu部署Tiddlywiki
+type: text/vnd.tiddlywiki
+
+!! 基本情况
+# 公司编辑Tiddlywiki
+# 家里编辑Tiddlywiki
+# svn（免费）：https://svnbucket.com/#/detail/710547
+#> [[svn://svnbucket.com/ksiniba/wiki/]]
+# 手机可以访问
+# 服务器可以自动更新
+## 难点ksino.top（123.207.18.80）不可以访问
+## svn不会自动更新

@@ -1,0 +1,81 @@
+created: 20200511064205028
+modified: 20200516073018995
+tags: kicad
+title: kicad基本操作
+type: text/vnd.tiddlywiki
+
+! 1. 热键
+|移动（不会断开连接）|g|
+|移动（断开连接）|m|
+|编辑|e|
+|旋转|r|
+|X镜像|x|
+|Y镜像|y|
+|增加元件|a|
+|复制|c|
+|连线|w|
+|添加标签|l|
+
+! 2. Symbol 元件
+> Symbol的库是一个`lib`的扩展名的文件
+> 这个库中的Symbol都在`lib`文件里面
+
+!! 新增元件
+* Symbol Editor
+* Create new Symbol
+* Select Symbol Library
+*> 选择要保存的库
+*> 名称以及符号
+
+* 一般会提供对应的元件图，按照元件图进行绘制
+
+!! 技巧
+
+* 修改坐标等等数据，可以直接在数据后面添加符号以及数字自动计算
+*> `+`号，或者`-`减号
+*> `2000+100`
+*> [img width=300 [kicad_pin_properties.png]]
+
+
+* 修改多个pin编号、坐标
+*> `Edit` -> `Pin table`
+*> 先在excel准备好复制的数字，然后在`pin table`中选择，复制
+
+* 修改多个pin的管脚长度
+*> 先修改一个pin后，右键这个pin
+*> `Global` -> `push pin size to others`
+
+* 填充颜色
+*> 编辑属性，`Fill style`
+*> `rectangle` 矩形图形才能编辑
+
+
+! 3. 原理图
+* 元件的添加 <kbd>A</kbd>
+* 标注 <kbd>E</kbd>
+* 连接 <kbd>W</kbd>
+* 标签 <kbd>L</kbd>
+
+
+! 4. Footprint 封装
+> footprint的库是在以`.pretty`的文件夹中，如`m200.pretty`
+> 文件夹里面的footprint是独立的单个文件
+
+!! 新增footprint
+* `FootPrint Editor` -> `new footprint `
+*> 先输入名称，保存的时候选择相应的库
+
+
+!! 技巧
+
+* 添加多个过孔或者贴片
+*> 先添加一个，然后右键`create array`（<kbd>Ctrl</kbd> + <kbd>T</kbd>）
+
+
+! PCB
+* pcb的各个层对应不同功能
+*>  pcb的框架需要在`Edge.cut`
+*> 正面连线`F.cu`
+*> 背面连线`B.cu`
+*> 过孔，从正面连线到背面，[[参考图片|kicad_via_propreties.png]]
+**> [img width=350 [kicad_via_propreties.png]]

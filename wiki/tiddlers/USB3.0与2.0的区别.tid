@@ -1,0 +1,10 @@
+created: 20191125083236738
+modified: 20191125083515978
+tags: hardware
+title: USB3.0与2.0的区别
+type: text/vnd.tiddlywiki
+
+!! USB3.0
+* 公口（针脚）：前4后5
+* 母口（针脚）：前5后4
+*> [[参考|http://iknow.lenovo.com/detail/dc_124794.html]]

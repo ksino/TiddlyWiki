@@ -1,0 +1,13 @@
+created: 20190629020032322
+modified: 20201125030444524
+tags: pyqt
+title: PyQt 属性与方法
+type: text/vnd.tiddlywiki
+
+* `setObjectName(name)`
+*> 当做对象的ID来使用
+*> 方法：`objectName()`
+
+* `setProperty(name, value)`
+*> 动态的添加一个属性与值，可用于样式
+*> 方法：`property(name)`

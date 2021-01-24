@@ -1,0 +1,8 @@
+created: 20191125095858162
+modified: 20191126001419934
+tags: windows shortkey
+title: 任务管理器快捷键
+type: text/vnd.tiddlywiki
+
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>ESc</kbd>
+*> `C:\Windows\system32\taskmgr.exe`

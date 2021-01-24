@@ -1,0 +1,55 @@
+created: 20190517075142879
+creator: ksino.H
+modified: 20210123072208925
+modifier: Ksino
+tags: 部署 linux
+title: Nginx
+type: text/vnd.tiddlywiki
+
+!! 基本命令
+> [[参考网页|https://www.cnblogs.com/binguo666/p/9939238.html]]
+
+*安装
+*> `sudo apt-get install nginx`
+
+* nginx的版本
+*> `nginx -v`
+* 安装成功后，我们进入nginx的目录下
+*> `cd /etc/nginx/`
+
+cd conf.d
+
+sudo vi binguo-online-8787.conf
+
+* 修改配置后，重启nginx
+*> `sudo nginx -s reload`
+
+!! 配置
+
+
+```
+server {
+    listen 80;
+    server_name 167.179.108.40;
+    location / {
+        proxy_pass http://127.0.0.1:3888;
+    }
+}
+server {
+    listen 80;
+    server_name www.ksino.top;
+    location / {
+        proxy_pass http://127.0.0.1:3888;
+    }
+}
+
+```
+
+!! 遇见的错误
+
+# [[nginx: [emerg] unknown directive "　　listen" in /etc/nginx/conf.d/wiki.conf:2|]]
+#* 配置文件第2行出现了 tab 空格 ， 换成正常的空格
+
+# [[nginx: [error] open() "/run/nginx.pid" failed (2: No such file or directory)|https://blog.csdn.net/wn1245343496/article/details/77974756]]
+#* `sudo nginx -c /etc/nginx/nginx.conf`
+#* `sudo nginx -s reload`

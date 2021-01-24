@@ -1,0 +1,125 @@
+created: 20191104224537506
+modified: 20200424023749354
+tags: undone editor
+title: Total Commander
+type: text/vnd.tiddlywiki
+
+!! 配置文件
+
+* wincmd.ini：保存TC的所有配置、快捷键
+*> `D:\Program\Total_Commande\Wincmd.ini`
+
+* Totalcmd.inc：对应命令和编号
+*> `D:\Program\Total_Commande\Totalcmd.inc`
+
+* Wcmd_chn.inc：功能模块索引号
+*> `D:\Program\Total_Commande\Language\Wcmd_chn.inc`
+
+* Wcmd_chn.mnu：菜单配置
+*> `D:\Program\Total_Commande\Language\Wcmd_chn.mnu`
+
+* usercmd.ini：自定义命令
+*> `D:\Program\Total_Commande\usercmd.ini`
+
+* everything打开文件夹默认total commander
+*> 修改`D:\Program\Everything\Everything.ini`文件
+*> `open_folder_command2=$exec(D:\Program\Total_Commande\Totalcmd64.exe "/O" "/T" "%1")`
+*> `open_path_command2=$exec(D:\Program\Total_Commande\Totalcmd64.exe "/O" "/T" "$parent(%1)")`
+
+<<copy-code """open_folder_command2=$exec(D:\Program\Total_Commande\Totalcmd64.exe "/O" "/T" "%1")
+open_path_command2=$exec(D:\Program\Total_Commande\Totalcmd64.exe "/O" "/T" "$parent(%1)")""">>
+
+----
+
+!! 快速定位目录 
+* <kbd>Ctrl</kbd> + <kbd>R</kbd> 常用文件夹列表（书签）
+*> （默认<kbd>Ctrl</kbd> + <kbd>D</kbd>）
+*> 配置文件目录：`D:\Program\Total_Commande\User\User.ini`
+
+* <kbd>Alt</kbd> + <kbd>F1</kbd> 切换磁盘直达招数
+*> 要切换到f盘，只要alt+F1 f即可。
+*> 建议：设为总到根目录。
+*> 菜单:配置→选项→操作方式→主程序→选中“更改驱动器时转到根文件夹”。
+
+
+* <kbd>Enter</kbd> 进入某目录
+* <kbd>Backspace</kbd> 返回上级目录
+* <kbd>Ctrl</kbd> +  <kbd>/</kbd> 返到根目录
+
+* <kbd>Alt</kbd> + <kbd>↓</kbd> 回顾目录历史
+
+* 新建tab：<kbd>Ctrl</kbd> + <kbd>T</kbd>
+* 关闭标签：<kbd>Ctrl</kbd> + <kbd>W</kbd>
+* 关闭所有非活动标签：<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd>
+* 在同侧的tab间切换：<kbd>Ctrl</kbd> + <kbd>Tab</kbd>; <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>；
+* 改变tab排列顺序（包括在两个窗口间移动）：鼠标左键拖动。
+
+* 压缩： <kbd>Alt</kbd> + <kbd>F5</kbd>
+* 解压缩：<kbd>Alt</kbd> + <kbd>F6</kbd>
+* 复制到当前目录：<kbd>Shift</kbd> + <kbd>F5</kbd>
+
+!! 批量改名
+
+* 选中多个文件：<kbd>Ctrl</kbd> + <kbd>M</kbd>
+
+F4默认编辑命令：%COMMANDER_PATH%\Tools\Notepad2.exe
+
+!! 快速启动Total commander
+* TC→配置→选项→操作方式→只允许一个Total Commander运行
+
+!!! 借助AutoHotkey
+* 所需软件：AutoHotkey （编译为exe之后，则不需要安装AutoHotkey程序）
+* 效果：按下Win+t，激活TC；再按则最小化。
+* 脚本
+```
+!t::
+    DetectHiddenWindows, on
+    IfWinNotExist ahk_class TTOTAL_CMD
+        Run d:\Program Files\tc\TOTALCMD.EXE
+    Else
+        IfWinNotActive ahk_class TTOTAL_CMD
+        WinActivate
+    Else
+        WinMinimize
+Return
+```
+
+!! NC操作方式
+> 菜单：`配置`→`选项`→`操作方式`→`鼠标选择方式`→选中`NC操作模式`。
+> 如果要发挥TC的最大威力，则推荐NC操作方式。
+
+* 如何调用右键菜单？
+*> TC中尽量少用右键菜单，因为有更高效的方式。
+*> shift+F10、或 键盘菜单键、或鼠标右键长按。
+----
+
+!! 快捷键
+> Wcmd_chn.mnu 从菜单找到对应的命令编号
+> Totalcmd.inc 编号找到命令
+> wincmd.ini 想定义的快捷键加入命令 `C+S=cm_FocusCmdLine`
+
+* sublime编辑文件：<kbd>F1</kbd>
+* 重命名：<kbd>F2</kbd>
+* 查看：<kbd>F3</kbd>
+* F4menu 多种打开方式编辑：<kbd>F4</kbd>
+* 复制：<kbd>F5</kbd>
+* 复制到当前文件夹：<kbd>Shift</kbd> + <kbd>F5</kbd>
+* 移动：<kbd>F6</kbd>
+*新建文件夹：<kbd>F7</kbd>
+*帮助：<kbd>F8</kbd>
+*配置：<kbd>F12</kbd>
+
+* 切换左右窗口：<kbd>Tab</kbd>
+* 左边窗口驱动器路径：<kbd>Alt</kbd> + <kbd>F1</kbd> 
+* 右边窗口驱动器路径：<kbd>Alt</kbd> + <kbd>F2</kbd> 
+* 常用文件夹：<kbd>Ctrl</kbd> + <kbd>R</kbd> 
+* 打开cmder命令行：<kbd>Ctrl</kbd> + <kbd>G</kbd>
+* 另一侧窗口浏览文件：<kbd>Ctrl</kbd> + <kbd>O</kbd>
+* 两侧面板路径相同：<kbd>Ctrl</kbd> + <kbd>0</kbd>
+* 刷新面板： <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+* 后退：<kbd>Ctrl</kbd> + <kbd>Backspace</kbd> 
+* 前进：<kbd>Shift</kbd> + <kbd>Backspace</kbd> 
+* 选中地址栏： <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> 
+* 创建快捷方式：<kbd>Ctrl</kbd> + <kbd>I</kbd>
+* <kbd>Ctrl</kbd> + <kbd>Enter</kbd>选中文件夹再<kbd>Enter</kbd>，打开windows的资源管理器
+* ctrl+S 在TotalCMD直接输入命令行

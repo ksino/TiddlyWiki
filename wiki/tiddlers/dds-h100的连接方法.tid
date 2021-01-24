@@ -1,0 +1,12 @@
+created: 20200614073030091
+modified: 20200614073443076
+tags: work
+title: dds-h100的连接方法
+type: text/vnd.tiddlywiki
+
+* 连接网线，开机
+* 修改本地的ip
+*> 192.168.61.10
+* 打开py的文件app_cc.py
+*> 设置->恢复默认设置
+*> 查看监控

@@ -1,0 +1,35 @@
+created: 20200727103437181
+modified: 20201125030130644
+tags: python
+title: conda虚拟python环境命令
+type: text/vnd.tiddlywiki
+
+* 生成conda的配置文件 
+*> `conda config --set show_channel_urls yes`
+
+* 添加Anaconda的TUNA镜像
+*>`conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/`
+
+* 查看当前存在哪些虚拟环境
+*> `conda env list` 
+*> `conda info -e`
+
+* Python创建虚拟环境
+*> `conda create -n your_env_name python=x.x`
+
+* 激活或者切换虚拟环境
+*> `Linux:  source activate your_env_nam`
+*> `Windows: activate your_env_name`
+
+* 关闭虚拟环境
+*> `deactivate env_name`
+*> Linux `source deactivate `
+
+* 删除虚拟环境
+*> `conda remove -n your_env_name --all`
+
+* 删除环境钟的某个包
+*> `conda remove --name $your_env_name  $package_name`
+
+* 创建已经存在环境备份到本机或者其他机器
+*> <<copy-code """conda create --name new_env --clone exist_env_or_path""">>

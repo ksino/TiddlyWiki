@@ -1,0 +1,55 @@
+created: 20200113013535939
+modified: 20200803080045818
+tags: command
+title: windows脚本 cmd bat语法
+type: text/vnd.tiddlywiki
+
+> 打开cmd查看帮助
+> 命令 /?
+
+* 调用脚本附加参数
+** 如下代码保存到`test.bat`的文件
+*> `test aa bb`, %0=test %1=aa %2=bb
+*> `test.bat aa bb`,  %0=test.bat %1=aa %2=bb
+
+<<copy-code """echo command = %0
+ehco param1 = %1
+ehco param2 = %2""" bat>>
+
+!! for语法
+> 192.168.3.100到192.168.3.105
+
+<<copy-code """for /L %D in (100,1,105) do ping 192.168.3.%D""" >>
+
+!! 显示空行
+<<copy-code """echo.""" >>
+
+!! 系统变量
+* %~dp0
+*> 文件打开的路径
+
+!! goto
+> 标签前面加`:`定义标签
+> 标签不能嵌套（有待证明，就是if的if里面goto 到标签报错）
+<<copy-code """goto AA
+:AA
+echo AA
+exit
+
+:BB
+echo BB""" >>
+
+!! 读取保存文件
+* 读取文件
+<<copy-code """if exist %file_path% (
+    for /f "delims=" %%a in (%file_path%) do (set txt=%%~a)
+) else (
+    echo "%file_path%" 配置文件不存在
+    echo.
+    echo ----------------------------------------------------------------
+    goto setpath
+)""">>
+
+* 保存文件
+<<copy-code """set /p rootpath=请输入python工程的根目录：
+@echo %rootpath% > signal_path.txt""">>

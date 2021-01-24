@@ -1,0 +1,14 @@
+created: 20190517144838440
+modified: 20210123020036908
+tags: soft
+title: vps科学上网
+type: text/vnd.tiddlywiki
+
+* `wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh`
+
+* `chmod +x shadowsocks.sh`
+* `./shadowsocks.sh 2>&1 | tee shadowsocks.log`
+*> 按照提示依次输入密码-输入端口号
+*> 加密方式选择（7）
+
+* [[参考|https://juejin.im/post/5c02454cf265da61776bb556]]

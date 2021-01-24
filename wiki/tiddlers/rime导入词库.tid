@@ -1,0 +1,43 @@
+created: 20191226013112269
+modified: 20200326024831697
+tags: rime
+title: rime导入词库
+type: text/vnd.tiddlywiki
+
+* [[搜狗标准词库|https://pinyin.sogou.com/dict/detail/index/11640]]
+* [[深蓝词库转换工具|https://github.com/studyzy/imewlconverter/releases]]
+*> https://www.jianshu.com/p/300bbe1602d4
+
+
+
+
+
+* 新建词库`C:\Users\k\AppData\Roaming\Rime\luna_pinyin.sougou.dict.yaml`
+*> 如`D:\Software\System\Input\Release_V2.6_Windows\sougou.txt`
+*> 重命名为`luna_pinyin.sougou.dict.yaml`并编辑，在文件头加入
+
+<<copy-code """
+name: luna_pinyin.sougou
+version: "2020.03.26"
+sort: by_weight
+use_preset_vocabulary: true
+""" yaml>>
+
+
+* 新建词库管理文件`C:\Users\k\AppData\Roaming\Rime\luna_pinyin.me.dict.yaml`
+*> 用于输入法加载这个文件，而 这个文件可以加载多个词库
+
+<<copy-code """name: luna_pinyin.me
+version: "2020.03.26"
+sort: by_weight
+use_preset_vocabulary: true
+# 
+import_tables:
+  - luna_pinyin # luna_pinyin.dict.yaml 
+  - luna_pinyin.sougou # luna_pinyin.sougou.dict.yaml""" yaml>>
+
+* 编辑你自己的输入法，如双拼
+*> 双拼对应的文件路径
+**>`C:\Users\k\AppData\Roaming\Rime\double_pinyin.custom.yaml`
+*> `patch`加入`"translator/dictionary": luna_pinyin.me`
+**> 对应`luna_pinyin.me.dict.yaml`

@@ -1,0 +1,11 @@
+created: 20201130033803211
+modified: 20210123013636195
+tags: work
+title: H530的设计
+type: text/vnd.tiddlywiki
+
+* 凹槽向下时
+* 新增3、右键2、开关0、左键1
+* <<red "开关、菜单、向前、向后">>
+
+{{键盘板}}

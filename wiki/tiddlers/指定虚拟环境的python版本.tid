@@ -1,0 +1,7 @@
+created: 20191115043332258
+modified: 20200409011249699
+tags: Python
+title: 指定虚拟环境的python版本
+type: text/vnd.tiddlywiki
+
+* `mkvirtualenv.bat --python=C:/winPython/python-3.5.4.amd64/python.exe env_name`

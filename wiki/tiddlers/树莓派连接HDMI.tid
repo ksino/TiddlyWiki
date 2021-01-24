@@ -1,0 +1,17 @@
+created: 20200408135808129
+modified: 20200408140753213
+tags: raspberry
+title: 树莓派连接HDMI
+type: text/vnd.tiddlywiki
+
+* `sudo vim /boot/config.txt`
+* 启用HDMI热插拔功能
+*> `hdmi_force_hotplug=1`
+* 启用加强HDMI信号
+*> `config_hdmi_boost=4`
+* 连接新式电视
+*> `hdmi_group=2`
+* 启用声音
+*> `hdmi_drive=2`
+
+链接：https://www.jianshu.com/p/c022c6f28c3a

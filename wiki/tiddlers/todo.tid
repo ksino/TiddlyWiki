@@ -1,0 +1,27 @@
+created: 20191021102252792
+creator: Ksino Huang
+modified: 20200413013957091
+modifier: Ksino Huang
+tags: ToDoMain menu
+title: Todo
+type: text/vnd.tiddlywiki
+
+>* TiddlyWiki5 可以作为一个简单的工作管理系统，无须进一步的客製化。
+>* 设定任务的标签为 `task`，已经完成的也设其标签为 `done`。以这种方式是直接产生工作清单。
+
+
+!! 未完成
+
+<$list filter="[!has[draft.of]tag[task]!tag[done]sort[created]]">
+
+<$checkbox tag="done"> <$link to={{!!title}}><<toc-caption>></$link></$checkbox>
+
+</$list>
+
+!! 已完成
+
+<$list filter="[!has[draft.of]tag[task]tag[done]sort[created]]">
+
+<$checkbox tag="done"> ~~<$link to={{!!title}}><<toc-caption>></$link>~~</$checkbox>
+
+</$list>

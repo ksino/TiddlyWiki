@@ -1,0 +1,32 @@
+created: 20190601021239909
+modified: 20190601022848496
+tags: html
+title: localStorage
+type: text/vnd.tiddlywiki
+
+
+* 新建修改
+*> `localStorage.setItem('myCat', 'Tom')`
+*> `localStorage.myCat = 'Tom'`
+
+* 查询
+*> `let cat = localStorage.getItem('myCat')`
+*> `let cat = localStorage.myCat`
+
+* 删除键值
+*> `localStorage.removeItem('myCat');`
+
+* 删除所有
+*> `localStorage.clear();`
+
+* 遍历键值
+
+```javascript
+var storageKey = function() {
+    var storage = window.localStorage;
+    for (var i = 0; i < storage.length; i++) {
+        var key = storage.key(i)
+        console.log(key)
+    }
+}
+```

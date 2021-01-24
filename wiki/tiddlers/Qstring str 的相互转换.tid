@@ -1,0 +1,11 @@
+created: 20190629011849506
+modified: 20201125030330694
+tags: pyqt
+title: Qstring str 的相互转换
+type: text/vnd.tiddlywiki
+
+!!! Qstring -> str
+> 多尝试一下，吊诡
+* `str(Qstring.toUtf8())`
+!!! str -> Qstring
+* `QString(unicode(text, 'utf-8', 'ignore'))`

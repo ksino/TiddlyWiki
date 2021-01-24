@@ -1,0 +1,14 @@
+created: 20200408032228262
+creator: Ksino Huang
+modified: 20200408075900776
+modifier: Ksino Huang
+tags: Wiki语法
+title: 水平分割线
+tmap.id: 94e6466b-14ab-4569-a942-08c2e8c4911d
+type: text/vnd.tiddlywiki
+
+单独一行使用3个或者多个`-`，产生一个水平分隔线：
+
+<<wikitext-example src:"---
+------
+">>

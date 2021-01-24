@@ -1,0 +1,15 @@
+created: 20200109022117493
+modified: 20200409011310774
+tags: task Todo done
+title: 增加可调参数
+type: text/vnd.tiddlywiki
+
+* 上位机的界面需要调整
+** debug的参数名称
+** debug的参数显示
+
+
+* 修改单片机的代码
+** debug的参数选择
+** debug的参数调整
+** debug的参数保存

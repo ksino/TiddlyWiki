@@ -1,0 +1,11 @@
+created: 20200406034059278
+modified: 20201125030252176
+tags: pyqt
+title: Qt保存配置参数
+type: text/vnd.tiddlywiki
+
+* settings.fileName()
+*> 保存的位置
+
+* `settings = QSettings()`
+*> 省略参数，导致保存失败

@@ -1,0 +1,13 @@
+author: JeremyRuston
+core-version: >=5.0.0
+created: 20200408064144918
+creator: Ksino Huang
+dependents: 
+description: Markdown parser
+list: readme usage
+modified: 20200408064144918
+modifier: Ksino Huang
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/markdown
+type: application/json
+version: 5.1.21

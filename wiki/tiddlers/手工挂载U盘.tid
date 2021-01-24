@@ -1,0 +1,14 @@
+created: 20200924024922688
+modified: 20200924025333224
+tags: linux
+title: 手工挂载U盘
+type: text/vnd.tiddlywiki
+
+<<copy-code """# 查看挂载的硬盘
+df -h
+# 查看存在的硬盘
+sudo fdisk -l
+# 挂载
+sudo mount /dev/sda1 /media/pi/EasyU
+# 卸载
+sudo umount /media/pi/EasyU1""" bash>>

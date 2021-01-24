@@ -1,0 +1,35 @@
+created: 20191125091202678
+modified: 20191210023123147
+tags: android
+title: Android Studio连接手机
+type: text/vnd.tiddlywiki
+
+> [[参考|https://blog.csdn.net/m0_37108482/article/details/80841689]]
+
+!! ADB环境配置
+
+* 查看自己Android Studio配置的sdk路径
+*>  Android Studio -->File -->Project Structure --> `SDK Location`
+*> 例如这里是`D:\Program\Android\Sdk`
+
+* 新建环境变量
+*> [[win7配置环境变量]]
+*> 变量名：`ANDROID_HOME`
+*> 变量值：`D:\Program\Android\Sdk\platform-tools`
+
+* 添加环境变量到path
+*> 编辑path，直接添加路径或者`%ANDROID_HOME%`
+
+* 命令行输入`adb`，检测是否配置成功
+
+
+!! 下载Google USB drive
+
+* Android Studio --> 选择`file` -->`Settings` --> 搜索`sdk` --> 点击`Android SDK`
+* 选择`SDK Tools` --> 勾选`Google USB driver`
+* 点击`Apply`
+
+!! 连接手机
+> [[tiny4412 android系统在电脑安装驱动]]
+
+　　

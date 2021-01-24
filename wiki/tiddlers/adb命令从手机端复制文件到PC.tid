@@ -1,0 +1,8 @@
+created: 20191221100636940
+modified: 20191221100809078
+tags: android
+title: adb命令从手机端复制文件到PC
+type: text/vnd.tiddlywiki
+
+* `adb  pull   <手机目录名>  <PC目录名>`
+*> `adb pull /storage/emulated/0/._videocache D:\Temp\ff`

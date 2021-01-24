@@ -1,0 +1,60 @@
+created: 20191106093321999
+modified: 20210123015010414
+tags: program
+title: 内网穿透：在公网访问你家的 NAS
+type: text/vnd.tiddlywiki
+
+! vps
+`nohup sudo /home/ubuntu/study/frp_0.30.0_linux_amd64/frps -c /home/ubuntu/study/frp_0.30.0_linux_amd64/frps.ini >/dev/null 2>&1 &`
+
+* frps.ini
+
+<<copy-code """[common]
+bind_port = 7000""">>
+
+! 树莓派
+
+* frpc.ini
+
+<<copy-code """[common]
+server_addr = 123.207.18.80
+server_port = 7000
+login_fail_exit = false
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 6000
+
+[http]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 80
+remote_port = 6001
+
+[rpc]
+local_ip = 127.0.0.1
+local_port = 6800
+remote_port = 6002
+
+[dlna]
+local_ip = 127.0.0.1
+local_port = 8200
+remote_port = 6003
+""">>
+
+
+<<copy-code """$ cat /usr/lib/systemd/system/frpc.service
+[Unit]
+Description=frpc
+After=network.target
+ 
+[Service]
+TimeoutStartSec=30
+ExecStart=/usr/local/bin/frpc -c /etc/frp/frpc.ini
+ExecStop=/bin/kill $MAINPID
+ 
+[Install]
+WantedBy=multi-user.target
+""">>

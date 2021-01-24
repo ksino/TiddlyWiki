@@ -1,0 +1,28 @@
+created: 20191114143823551
+modified: 20191115020106104
+tags: linux android
+title: Linux Deploy on Andriod
+type: text/vnd.tiddlywiki
+
+> 在安卓手机上安装Linux系统,但是安装的系统需支持ARM架构.
+> 安装的centos-altarch,yum源的支持不是太好.
+
+!! 安装步骤
+
+!!! 安装[[busybox app|https://github.com/meefik/busybox/releases]]
+> 速度慢，百度网盘有存货
+
+!!! 安装 [[linuxdeploy app|https://github.com/meefik/linuxdeploy/releases]]
+# 配置文件
+#*  ubuntu源地址
+#* `https://mirror.tuna.tsinghua.edu.cn/ubuntu-ports/`
+#*  选择速度快一点，如中科大或者清华  
+#*  `https://mirror.tuna.tsinghua.edu.cn/archlinuxarm/`  
+#*  可以设置安装路径  
+#* `/mnt/sdcard/linux/arch/arch.img/ `
+
+
+# 点击`安装`
+# 点击`启动`
+# 文件传输
+#> `scp D:/Catalog/Django/maxone.zip kim@192.168.1.132:/home/kim/project`

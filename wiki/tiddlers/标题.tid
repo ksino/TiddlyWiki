@@ -1,0 +1,22 @@
+created: 20190516150056232
+creator: Ksino Huang
+modified: 20200408075900800
+modifier: Ksino Huang
+tags: Wiki语法
+title: 标题
+tmap.id: e0b3e274-a394-479d-b993-ea64ce083237
+type: text/vnd.tiddlywiki
+
+* 使用感叹号`! `，最多为6个
+ 
+```
+! 一级标题
+
+!! 二级标题
+
+!!! 三级标题
+```
+
+* 可以指定CSS
+
+<<wikitext-example src:"" "!!.myStyle This heading has the class `myStyle`">>

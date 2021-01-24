@@ -1,0 +1,111 @@
+created: 20190516160248042
+creator: ksino.H
+modified: 20210123072216308
+modifier: Ksino
+tags: git
+title: Git
+type: text/vnd.tiddlywiki
+
+* https://rogerdudler.github.io/git-guide/index.zh.html
+* [[图解git|https://marklodato.github.io/visual-git-guide/index-zh-cn.html]]
+
+!! 0.添加公钥
+
+* http://blog.csdn.net/fenghuibian/article/details/73350890
+* 本地生成ssk-key
+* 添加公钥到github
+
+!! 1.创建新仓库
+* `git init`
+
+!! 2.1 克隆一个库
+
+> `git clone git@github.com:ksino/maxone.git`
+> `git push origin master`
+
+!! 2.2 同步到远程库
+
+* 需要新建好库
+*> `git remote add origin git@github.com:ksino/maxone.git`
+
+* 修改仓库地址
+*> `git remote rm origin`
+*> `git remote add origin 仓库地址`
+
+* 推送到远程库
+*> `git push -u origin master`
+  
+
+* 第一次使用随便设置email, username
+
+```
+git config --global user.name "kim"
+git config --global user.email "kim@debian.com"
+```
+
+!! 添加文件
+> `git add <file>`
+
+* 所有文件
+> `git add *`
+
+!! 删除文件
+> `git rm file`
+
+!! 提交
+> `git commit -m "代码提交信息"`
+
+!! 推送
+> `git push`
+
+!! 本地更新
+> `git pull`
+
+
+!! 回到某个版本
+> `git log`
+> `git reset --hard 806f0ebf945deca2c55aac2e24fb7a14ff31ddeb`
+
+!! 忽略文件
+
+*  新建一个 .gitignore 文件
+*> `touch .gitignore`
+
+
+* 过滤文件夹
+*> `/target/`
+
+* 过滤某种类型的文件
+*> `*.pyc`
+
+!! git clone速度太慢的问题
+
+```bash
+nslookup github.global.ssl.fastly.net
+nslookup github.com
+# 命令显示如下               
+# Server:		127.0.0.53
+# Address:	127.0.0.53#53
+
+# Non-authoritative answer:
+# Name:	github.com
+# Address: 13.250.177.223
+
+sudo vim /etc/hosts
+# 编辑如下
+# 下面的ip不一定好用，测ip的速度
+# 151.101.229.194 github.global.ssl.fastly.net
+# 13.250.177.223 github.com
+
+# 重启网络组件
+sudo /etc/init.d/networking restart
+```
+
+!! git 断点续传
+
+<<copy-code """mkdir dir_name
+cd dir_name
+git init
+git fetch GIT_REPO_URL
+git checkout FETCH_HEAD
+""" >>

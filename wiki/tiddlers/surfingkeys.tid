@@ -1,0 +1,9 @@
+created: 20200505025732406
+modified: 20210123015735570
+tags: browser
+title: surfingkeys
+type: text/vnd.tiddlywiki
+
+<<copy-code """addSearchAliasX('t', 'taobao', 'https://s.taobao.com/search?imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20191025&ie=utf8&q=');
+addSearchAliasX('v', 'zhihu', 'http://www.zhihu.com/search?q=');
+addSearchAliasX('d', 'douban', 'https://www.douban.com/search?q=');""" javascript>>

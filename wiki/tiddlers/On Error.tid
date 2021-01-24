@@ -1,0 +1,10 @@
+created: 20210115025525113
+modified: 20210121070126475
+tags: vba
+title: On Error
+type: text/vnd.tiddlywiki
+
+[[On Error语句参考|https://docs.microsoft.com/zh-cn/dotnet/visual-basic/language-reference/statements/on-error-statement]] 
+
+<<copy-code """On Error { GoTo [ line | 0 | -1 ] | Resume Next }""" >>
+

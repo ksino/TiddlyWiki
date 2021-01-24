@@ -1,0 +1,20 @@
+created: 20191104021757314
+modified: 20200404040010528
+tags: browser firefox
+title: firefox禁止提示更新
+type: text/vnd.tiddlywiki
+
+> 使用DisableAppUpdate企业策略禁止更新
+
+* 在 `firefox.exe` 所在目录新建文件夹 `distribution`，里面创建一个 `policies.json` 文件内容
+*> `C:\Program Files\Mozilla Firefox\distribution`
+
+<<copy-code """
+{
+    "policies": {
+        "DisableAppUpdate": true
+    }
+}
+""" json>>
+
+* 查看选项时，已经变成`更新已被系统管理员禁用`

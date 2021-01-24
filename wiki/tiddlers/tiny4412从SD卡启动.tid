@@ -1,0 +1,123 @@
+created: 20191118215828727
+modified: 20191118220508231
+tags: undone
+title: tiny4412从SD卡启动
+type: text/vnd.tiddlywiki
+
+```bash
+从零开始教你制作友善之壁TINY4412----SD卡uboot启动卡
+morixinguan 2017-04-16 17:49:00 浏览897
+
+    系统盘
+
+关于这节，有很多小伙伴要我亲自写一遍，那好吧，我就亲自写一遍：
+
+首先，你要制作一张SD卡，把SD卡先插到电脑端口:
+
+然后看以下步骤:
+
+1、查看SD卡位于哪个分区哪个设备节点
+
+(1)先查看SD卡的设备节点是哪个,我的是/dev/sdb1
+root@morixinguan:/work# df
+文件系统           1K-块      已用      可用 已用% 挂载点
+udev             8123220         0   8123220    0% /dev
+tmpfs            1628884      9796   1619088    1% /run
+/dev/sda10     302264768 105923724 180963844   37% /
+tmpfs            8144404       336   8144068    1% /dev/shm
+tmpfs               5120         8      5112    1% /run/lock
+tmpfs            8144404         0   8144404    0% /sys/fs/cgroup
+tmpfs            1628884        84   1628800    1% /run/user/1000
+/dev/sda8         184301    148317     22365   87% /media/morixinguan/eba806c5-dee1-44bb-af17-a26f2e8bbfef
+/dev/sda7      615517180  55709888 559807292   10% /media/morixinguan/Android-Linux
+/dev/sda5      616564732   5202500 611362232    1% /media/morixinguan/软件安装
+/dev/sda6      307198972     97160 307101812    1% /media/morixinguan/新加卷
+/dev/sdb1        7590912    280972   7309940    4% /media/morixinguan/FRIENDLYARM
+
+2、D卡格式化
+
+root@morixinguan:/work# dd if=/dev/zero of=/dev/sdb bs=1024 count=102400
+
+D卡成功，会打印以下的信息在你的终端上：
+
+记录了102400+0 的读入
+记录了102400+0 的写出
+104857600 bytes (105 MB, 100 MiB) copied, 21.2743 s, 4.9 MB/s
+
+3、切换到你的uboot源码的目录下：
+
+如果你的uboot没有编译，请先执行:
+
+(1)make tiny4412_config
+
+(2)make
+
+如果uboot已经编译过了，接下来:
+
+root@morixinguan:/work# ls
+android-5.0.2  MiniTools-20150528  MT8350_MO_MP8  u-boot  u-boot.bin  uboot_tiny4412
+root@morixinguan:/work# cd uboot_tiny4412/
+root@morixinguan:/work/uboot_tiny4412# ls
+api    boards.cfg  COPYING      disk     examples  lib          Makefile  net          README    snapshot.commit  u-boot      u-boot.map
+arch   common      COPYING.txt  doc      fs        MAINTAINERS  mkconfig  onenand_ipl  rules.mk  System.map       u-boot.bin  u-boot.srec
+board  config.mk   CREDITS      drivers  include   MAKEALL      nand_spl  post         sd_fuse   tools            u-boot.lds
+
+4、编译sd_fuse
+
+root@morixinguan:/work/uboot_tiny4412# cd sd_fuse/
+root@morixinguan:/work/uboot_tiny4412/sd_fuse# make
+
+编译成功会打印下面这两行:
+
+gcc -o    mkbl2 V310-EVT1-mkbl2.c
+gcc -o    sd_fdisk sd_fdisk.c
+
+
+5、再切换到tiny4412目录下：
+
+root@morixinguan:/work/uboot_tiny4412/sd_fuse# cd tiny4412/
+
+
+6、烧写固件到你的SD卡，这里要选sdb（这一步非常关键，烧写不要烧到sdb1去了，具体看情况，有可能你的是sda，别搞错了,搞错了，你烧到系统盘我不负责）
+
+root@morixinguan:/work/uboot_tiny4412/sd_fuse/tiny4412# ./sd_fusing.sh /dev/sdb
+sdb   sdb1  
+
+烧写成功:
+
+---------------------------------------
+BL1 fusing
+记录了16+0 的读入
+记录了16+0 的写出
+8192 bytes (8.2 kB, 8.0 KiB) copied, 0.0725637 s, 113 kB/s
+---------------------------------------
+BL2 fusing
+记录了28+0 的读入
+记录了28+0 的写出
+14336 bytes (14 kB, 14 KiB) copied, 0.0371715 s, 386 kB/s
+---------------------------------------
+u-boot fusing
+记录了540+1 的读入
+记录了540+1 的写出
+276932 bytes (277 kB, 270 KiB) copied, 0.711899 s, 389 kB/s
+---------------------------------------
+TrustZone S/W fusing
+记录了184+0 的读入
+记录了184+0 的写出
+94208 bytes (94 kB, 92 KiB) copied, 0.262625 s, 359 kB/s
+---------------------------------------
+U-boot image is fused successfully.
+Eject SD card and insert it again.
+root@morixinguan:/work/uboot_tiny4412/sd_fuse/tiny4412#
+固件烧写成功！
+
+7、接下来，拔出你的SD卡，插到你的开发板上，然后开关拔到SD_BOOT这个位置：
+
+打开你的minicom,minicom要提前配置好，这里不再哆嗦，往期博文有，自己去找找:
+
+8、启动开发板
+
+会看到以下情景：
+
+说明，UBOOT烧写成功！接下来，你还可以烧内核。
+```

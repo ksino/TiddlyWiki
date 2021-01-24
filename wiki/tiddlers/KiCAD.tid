@@ -1,0 +1,25 @@
+created: 20191021092827094
+modified: 20191108085647711
+tags: kicad
+title: kicad
+type: text/vnd.tiddlywiki
+
+!! symbol原理图
+
+# `symbol editor`
+# 选择对应的库增加symbol
+# 先画出大体形状
+# `Add pin to symbol`
+## `pin name`, `pin number`, `electrical type`, `orientation`
+## 调节好位置，名称不要重叠
+
+!! fontprint
+
+# 先搜索有没有相近的footprint
+# 按照 datasheet 的尺寸进行
+
+!! 代码更新
+# 以下文件可以忽略
+ * `*.bak`
+* `fp-info-cache`
+* `*.kicad_pcb-bak`

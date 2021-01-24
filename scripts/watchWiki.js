@@ -4,7 +4,7 @@ const execSync = require('child_process').execSync;
 
 const wikiFolderName = require('../package.json').name;
 const privateWikiName = require('../package.json').privateWikiName;
-const COMMIT_INTERVAL = (1000 * 60 * 60) / 2;
+const COMMIT_INTERVAL = (1000 * 60 * 60) / 60;
 
 const tiddlyWikiRepo = path.join(path.dirname(__filename), '..');
 module.exports.tiddlyWikiRepo = tiddlyWikiRepo;
@@ -72,9 +72,9 @@ const commitAndSync = (folderPath) => {
   } catch (error) {
     const errorString = `\nSync failed
     stdout:
-    ${error.stdout ? error.stdout.toString('utf8') : '\n'}
+    ${error.stdout ? error.stdout : '\n'}
     stderr:
-    ${error.stderr ? error.stderr.toString('utf8') : '\n'}
+    ${error.stderr ? error.stderr : '\n'}
     raw:
     `;
     console.error(errorString);

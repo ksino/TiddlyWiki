@@ -1,0 +1,53 @@
+created: 20190626213229150
+modified: 20191114105145954
+tags: svn
+title: svn
+type: text/vnd.tiddlywiki
+
+!! Command
+>  `svn help command(eg. update, checkout, commit)`
+
+---
+
+* 检出版本库
+*> `svn checkout svn_url local_path --username 用户名 --password 密码`
+** 简写
+**> `svn co`
+** 不指定本地路径，使用版本库文件夹的名字
+
+---
+
+* 更新
+*> `svn update`
+** 简写
+**> `svn up`
+** `svn　update　-r　修正版本　文件名`
+
+---
+
+* 提交
+*> `svn commit -m “log message”`
+** 简写
+**> `svn ci`
+** commit之前需要`svn add file` or `svn delete file`
+
+---
+
+* 恢复本地修改
+*> `svn revert`
+** 简写
+**> `svn ci`
+** commit之前需要`svn add file` or `svn delete file`
+
+---
+
+* 查看状态
+** 状态
+**> `svn status`
+** 日志
+**> `svn log`
+** 信息
+**> `svn info`
+** 比较差异
+**> `svn diff`
+---

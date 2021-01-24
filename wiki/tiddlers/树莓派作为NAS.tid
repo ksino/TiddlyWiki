@@ -1,0 +1,45 @@
+created: 20191227004646639
+modified: 20200721064404926
+tags: raspberry
+title: 树莓派作为NAS
+type: text/vnd.tiddlywiki
+
+* sudo apt-get install ntfs-3g
+*> 自动挂载
+
+!! aria2
+
+手工命令下载
+
+!! web界面
+
+* [[AriaNG Githup|https://github.com/mayswind/AriaNg]]
+
+* https://www.deeplearn.me/2340.html
+
+* https://blog.csdn.net/kxwinxp/article/details/80288006
+
+!! samba
+* 配置文件路径 `/etc/samba/smb.conf`
+
+* windows访问的方法
+*> `\\192.168.1.130`
+
+* 添加用户
+*> 添加的Samba用户首先必须是Linux用户
+*> `sudo useradd username`
+*> `sudo smbpasswd -a username`
+
+```bash
+#添加的Samba用户首先必须是Linux用户
+sudo useradd me
+sudo smbpasswd -a me
+New SMB password:
+Retype new SMB password:
+Added user me.
+```
+
+* 重启服务
+*> `sudo systemctl restart smbd.service`
+
+

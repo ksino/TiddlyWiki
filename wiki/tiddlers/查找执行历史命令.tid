@@ -1,0 +1,16 @@
+created: 20191209005745830
+modified: 20191209010454014
+tags: linux
+title: 查找执行历史命令
+type: text/vnd.tiddlywiki
+
+* 显示历史命令
+*> `history`
+
+* 执行某个历史命令
+*> `! 序号`
+*> `! 16`
+
+* 搜索执行
+*>  按下<kbd>Ctrl</kbd> + <kbd>R</kbd>，输入搜索词
+*> 对`cmder`有用

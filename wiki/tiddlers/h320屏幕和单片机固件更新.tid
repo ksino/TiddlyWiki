@@ -1,0 +1,34 @@
+created: 20191204003803829
+modified: 20210123013505039
+tags: work
+title: h320屏幕和单片机固件更新
+type: text/vnd.tiddlywiki
+
+! 准备
+
+
+* 安装驱动
+*> `PortaPack.Firmware.Tool-20160728.exe`
+*> `D:\Software\System\Driver\h320`
+
+* H320连接电脑
+*> 会发现`HackRF One`硬件
+
+* 更新固件的方法
+*> 按住真机的''右键''（调节键），再''中间键''（开机键）
+
+!  屏幕
+
+* 屏幕固件
+*> `usart hmi`输出`tft`生产文件
+*> 执行批处理
+*> D:\Program\win_fw_tools\`hdm_flash.exe` `-R -f 2 -w` C:\Users\k\Documents\`h320_main.tft`
+
+* 屏幕更新完之后会停留在开机界面
+*> 按两下中间键（实践就是进入界面后关机，只是看不到）
+*> 长按`开关键`关机，或者右侧的`第二`个孔reset
+
+! 单片机
+
+* 命令
+*> D:\Program\win_fw_tools\`hdm_flash.exe` `-R -f 1 -w` C:\Users\k\Documents\`hdm-h320-firmware_2019_12_10.bin`

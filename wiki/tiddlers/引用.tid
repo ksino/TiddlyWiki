@@ -1,0 +1,68 @@
+created: 20190516133952903
+creator: ksino.H
+modified: 20200414070017186
+modifier: Ksino Huang
+tags: Wiki语法
+title: 引用
+tmap.id: fc950bd7-35de-49af-b413-98a5250ead8a
+type: text/vnd.tiddlywiki
+
+! 多行引用
+
+<<wikitext-example src:"<<<
+This is a block quoted paragraph
+written in English
+<<<
+">>
+
+!! 引用
+* 引用可加入到引言区块：
+
+<<wikitext-example src:"<<<
+相看两不厌，只有敬亭山。
+<<< 李白
+">>
+
+* CSS可以加入到引言，例如大引号样式。
+
+<<wikitext-example src:"<<<.tc-big-quote
+相看两不厌，只有敬亭山。
+<<< 李白
+">>
+
+! 单行引用
+
+
+```
+> Quoted text
+> Another line of quoted text
+```
+
+> Quoted text
+> Another line of quoted text
+
+
+```
+> A top quote
+>> A subquote
+> Another top quote
+```
+
+> A top quote
+>> A subquote
+> Another top quote
+
+
+```
+* List One
+** List Two
+**> A quote
+**> Another quote
+* List Three
+```
+
+* List One
+** List Two
+**> A quote
+**> Another quote
+* List Three
