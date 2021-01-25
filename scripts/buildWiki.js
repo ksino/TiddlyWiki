@@ -27,7 +27,7 @@ module.exports = function build() {
   // npm run build:nodejs2html
   // 需要使用原来github模板的tiddlywiki.info配置
   // execAndLog(`tiddlywiki ${wikiFolderName} --build externalimages`, { cwd: repoFolder });
-  execAndLog(`tiddlywiki ${wikiFolderName} --build`, { cwd: repoFolder });
+  execAndLog(`tiddlywiki ${wikiFolderName} --build index`, { cwd: repoFolder });
   // npm run build:sitemap
   // execAndLog(
   //   `tiddlywiki ${wikiFolderName} --rendertiddler sitemap sitemap.xml text/plain && mv ${tiddlyWikiFolder}/output/sitemap.xml ./public/sitemap.xml`,
