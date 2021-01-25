@@ -19,25 +19,25 @@ module.exports = function build() {
   execAndLog(`rm -rf ${repoFolder}/public`);
 
   // npm run build:public
-  execAndLog(
-    `cp -r ${tiddlyWikiFolder}/public/ ./public && cp ${tiddlyWikiFolder}/tiddlers/favicon.ico ./public/favicon.ico && cp ${tiddlyWikiFolder}/tiddlers/TiddlyWikiIconWhite.png ./public/TiddlyWikiIconWhite.png && cp ${tiddlyWikiFolder}/tiddlers/TiddlyWikiIconBlack.png ./public/TiddlyWikiIconBlack.png`,
-    { cwd: repoFolder }
-  );
+  // execAndLog(
+  //   `cp -r ${tiddlyWikiFolder}/public/ ./public && cp ${tiddlyWikiFolder}/tiddlers/favicon.ico ./public/favicon.ico && cp ${tiddlyWikiFolder}/tiddlers/TiddlyWikiIconWhite.png ./public/TiddlyWikiIconWhite.png && cp ${tiddlyWikiFolder}/tiddlers/TiddlyWikiIconBlack.png ./public/TiddlyWikiIconBlack.png`,
+  //   { cwd: repoFolder }
+  // );
 
   // npm run build:nodejs2html
   // 需要使用原来github模板的tiddlywiki.info配置
   // execAndLog(`tiddlywiki ${wikiFolderName} --build externalimages`, { cwd: repoFolder });
   execAndLog(`tiddlywiki ${wikiFolderName} --build`, { cwd: repoFolder });
   // npm run build:sitemap
-  execAndLog(
-    `tiddlywiki ${wikiFolderName} --rendertiddler sitemap sitemap.xml text/plain && mv ${tiddlyWikiFolder}/output/sitemap.xml ./public/sitemap.xml`,
-    { cwd: repoFolder }
-  );
+  // execAndLog(
+  //   `tiddlywiki ${wikiFolderName} --rendertiddler sitemap sitemap.xml text/plain && mv ${tiddlyWikiFolder}/output/sitemap.xml ./public/sitemap.xml`,
+  //   { cwd: repoFolder }
+  // );
   // npm run build:minifyHTML
-  execAndLog(
-    `html-minifier-terser -c ./html-minifier-terser.config.json -o ./public/index.html ${tiddlyWikiFolder}/output/index.html`,
-    { cwd: repoFolder }
-  );
+  // execAndLog(
+  //   `html-minifier-terser -c ./html-minifier-terser.config.json -o ./public/index.html ${tiddlyWikiFolder}/output/index.html`,
+  //   { cwd: repoFolder }
+  // );
   // npm run build:precache
   // execAndLog(`workbox injectManifest workbox-config.js`, { cwd: repoFolder });
   // npm run build:clean

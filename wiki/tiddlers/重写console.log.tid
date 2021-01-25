@@ -1,0 +1,9 @@
+created: 20210125024549271
+modified: 20210125024706906
+tags: JavaScript
+title: 重写console.log
+type: text/vnd.tiddlywiki
+
+<<copy-code """var log = function() {
+    console.log.apply(console, arguments)
+}""" javascript>>
